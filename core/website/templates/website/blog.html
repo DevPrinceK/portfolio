@@ -1,5 +1,39 @@
 {% extends 'website/base.html' %}
 {% load static %}
+{% block menu %}
+<ul class="main-menu">
+    <li>
+        <a href="/#about-me" class="nav-anim">
+            <span class="menu-icon lnr lnr-user"></span>
+            <span class="link-text">About Me</span>
+        </a>
+    </li>
+    <li>
+        <a href="/#resume" class="nav-anim">
+            <span class="menu-icon lnr lnr-graduation-hat"></span>
+            <span class="link-text">Resume</span>
+        </a>
+    </li>
+    <li>
+        <a href="/#portfolio" class="nav-anim">
+            <span class="menu-icon lnr lnr-briefcase"></span>
+            <span class="link-text">My Works</span>
+        </a>
+    </li>
+    <li>
+        <a href="/#blog" class="nav-anim">
+            <span class="menu-icon lnr lnr-book"></span>
+            <span class="link-text">Blog</span>
+        </a>
+    </li>
+    <li>
+        <a href="/#contact" class="nav-anim">
+            <span class="menu-icon lnr lnr-envelope"></span>
+            <span class="link-text">Contact</span>
+        </a>
+    </li>
+</ul>
+{% endblock %}
 {% block content %}
 <div class="content-area single-page-area">
     <div class="single-page-content">
