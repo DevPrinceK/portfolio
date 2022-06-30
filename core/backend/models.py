@@ -1,4 +1,5 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 from accounts.models import User
 
 
@@ -6,7 +7,7 @@ class Blog(models.Model):
     '''Model for creating blog posts'''
     title = models.CharField(max_length=200)
     image = models.ImageField(upload_to='images/')
-    content = models.TextField()
+    content = RichTextField()
     tags = models.ManyToManyField('Tag')
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
