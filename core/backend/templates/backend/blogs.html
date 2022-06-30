@@ -26,10 +26,11 @@
                     </div>
                 </div>
             </div>
+            {% for blog in blogs %}
             <div class="col-12 card blog-item">
                 <div class="card-body">
                     <div class="row">
-                        <h2 class="col-10"> <a href=""> How to deploy djanog on digitalocean droplet.</a></h2>
+                        <h2 class="col-10"> <a href="">{{blog.title}}.</a></h2>
                         <div class="container col-2 text-right">
                             <a href="" class="btn btn-sm btn-primary">Edit</a>
                             <a href="" class="btn btn-sm btn-danger">Delete</a>
@@ -37,6 +38,7 @@
                     </div>
                 </div>
             </div>
+            {% endfor %}
 
         </div>
     </div>
