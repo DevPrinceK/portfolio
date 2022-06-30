@@ -947,105 +947,31 @@
 
                         <div class="blog-masonry two-columns clearfix">
 
-                            <!-- Blog Post 1 -->
+                            {% for blog in blogs %}
+                            <!-- Blog Post  -->
                             <div class="item post-1 category_all category_design">
                                 <div class="blog-card">
                                     <div class="media-block">
                                         <div class="category">
-                                            <a href="#" title="View all posts in Design">Design</a>
+                                            <a href="#" title="View all posts in Design">{{blog.category.name}}</a>
                                         </div>
-                                        <a href="{% url 'website:blog' %}">
-                                            <img src="{% static 'img/blog/blog_post_1.jpg' %}"
-                                                class="size-blog-masonry-image-two-c"
-                                                alt="Why I Switched to Sketch For UI Design" title="" />
+                                        <a href="{% url 'website:blog' %}?blog_id={{blog.id}}">
+                                            <img src="{% if blog.image %} {{blog.image.url}} {% else %} {% static 'img/blog/blog_post_1.jpg' %} {% endif %} "
+                                                class="size-blog-masonry-image-two-c" alt="blog-image" title="" />
                                             <div class="mask"></div>
                                         </a>
                                     </div>
                                     <div class="post-info">
-                                        <div class="post-date">05 Mar 2022</div>
-                                        <a href="{% url 'website:blog' %}">
-                                            <h4 class="blog-item-title">Why I Switched to Sketch For UI
-                                                Design</h4>
+                                        <div class="post-date">{{blog.date|date:"M d Y"}}</div>
+                                        <a href="{% url 'website:blog' %}?blog_id={{blog.id}}">
+                                            <h4 class="blog-item-title">{{blog.title}}</h4>
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                            <!-- End of Blog Post 1 -->
+                            <!-- End of Blog Post  -->
+                            {% endfor %}
 
-                            <!-- Blog Post 2 -->
-                            <div class="item post-2 category_all category_ui">
-                                <div class="blog-card">
-                                    <div class="media-block">
-                                        <div class="category">
-                                            <a href="#" title="View all posts in WordPress">WordPress</a>
-                                        </div>
-                                        <a href="{% url 'website:blog' %}">
-                                            <img src="{% static 'img/blog/blog_post_2.jpg' %}"
-                                                class="size-blog-masonry-image-two-c"
-                                                alt="Best Practices for Animated Progress Indicators" title="" />
-                                            <div class="mask"></div>
-                                        </a>
-                                    </div>
-                                    <div class="post-info">
-                                        <div class="post-date">23 Feb 2022</div>
-                                        <a href="{% url 'website:blog' %}">
-                                            <h4 class="blog-item-title">How to Make a WordPress Plugin
-                                                Extensible</h4>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End of Blog Post 2 -->
-
-                            <!-- Blog Post 3 -->
-                            <div class="item post-1 category_all category_design">
-                                <div class="blog-card">
-                                    <div class="media-block">
-                                        <div class="category">
-                                            <a href="#" title="View all posts in Design">Design</a>
-                                        </div>
-                                        <a href="{% url 'website:blog' %}">
-                                            <img src="{% static 'img/blog/blog_post_3.jpg' %}"
-                                                class="size-blog-masonry-image-two-c"
-                                                alt="Designing the Perfect Feature Comparison Table" title="" />
-                                            <div class="mask"></div>
-                                        </a>
-                                    </div>
-                                    <div class="post-info">
-                                        <div class="post-date">06 Feb 2022</div>
-                                        <a href="{% url 'website:blog' %}">
-                                            <h4 class="blog-item-title">6 Easy Steps to Better Icon Design
-                                            </h4>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End of Blog Post 3 -->
-
-                            <!-- Blog Post 4 -->
-                            <div class="item post-2 category_all category_ecommerce">
-                                <div class="blog-card">
-                                    <div class="media-block">
-                                        <div class="category">
-                                            <a href="#" title="View all posts in E-Commerce">E-Commerce</a>
-                                        </div>
-                                        <a href="{% url 'website:blog' %}">
-                                            <img src="{% static 'img/blog/blog_post_4.jpg' %}"
-                                                class="size-blog-masonry-image-two-c"
-                                                alt="An Overview of E-Commerce Platforms" title="" />
-                                            <div class="mask"></div>
-                                        </a>
-                                    </div>
-                                    <div class="post-info">
-                                        <div class="post-date">07 Jan 2022</div>
-                                        <a href="{% url 'website:blog' %}">
-                                            <h4 class="blog-item-title">An Overview of E-Commerce Platforms
-                                            </h4>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End of Blog Post 4 -->
                         </div>
                     </div>
                 </div>
