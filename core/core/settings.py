@@ -14,6 +14,7 @@ INSTALLED_APPS = [
 
     #
     'website.apps.WebsiteConfig',
+    'backend.apps.BackendConfig',
 ]
 
 MIDDLEWARE = [
