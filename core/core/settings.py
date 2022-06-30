@@ -15,6 +15,7 @@ INSTALLED_APPS = [
     #
     'website.apps.WebsiteConfig',
     'backend.apps.BackendConfig',
+    'accounts.apps.AccountsConfig',
 ]
 
 MIDDLEWARE = [
@@ -85,6 +86,9 @@ MEDIA_URL = '/assets/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+
+
+AUTH_USER_MODEL = 'accounts.User'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
