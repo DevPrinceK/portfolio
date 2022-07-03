@@ -3,7 +3,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-bd0tcql!p1v83hbcac0(7c%9f0=57rz^^rtxd6upu-t)a@#3!2'
 DEBUG = True
-ALLOWED_HOSTS = ['206.189.101.221', 'www.devprincek.me']
+ALLOWED_HOSTS = ['206.189.101.221', 'www.devprincek.me', 'devprincek.me']
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
