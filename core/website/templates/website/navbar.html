@@ -1,0 +1,55 @@
+ {% load static %}
+
+ <!-- start navbar -->
+ <nav class="navbar navbar-expand-lg fixed-top sticky bg-white" id="navbar">
+     <div class="container">
+         <a href="{% url 'website:index' %}" class="navbar-brand">
+             <!-- <img src="{% static 'images/logo-sm.png' %}" class="logo-sm" alt="" height="24" />
+             <img src="{% static 'images/logo-light.png' %}" class="logo-light" alt="" height="16" />
+             <img src="{% static 'images/logo-dark.png' %}" class="logo-dark" alt="" height="16" /> -->
+             <img src="{% static 'images/logos/devprincek-sm.png' %}" class="logo-sm" alt="" height="48" />
+             <img src="{% static 'images/logos/devprincek.png' %}" class="logo-light" alt="" height="48" />
+             <img src="{% static 'images/logos/devprincek-sm.png' %}" class="logo-dark" alt="" height="36" />
+         </a>
+         <!--end navbar-brand-->
+         <a href="javascript:void(0)" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggle-icon"><i data-feather="menu"></i></span>
+         </a>
+         <!--end navbar-toggler-->
+
+         <div class="collapse navbar-collapse" id="navbarNav">
+             <ul class="navbar-nav mx-auto navbar-center mt-lg-0 mt-2">
+                 <li class="nav-item">
+                     <a class="nav-link active" href="{% url 'website:index' %}">Home</a>
+                 </li>
+                 <!--end nav-item-->
+                 <li class="nav-item">
+                     <a class="nav-link" href="{% url 'website:about' %}">About</a>
+                 </li>
+                 <!--end nav-item-->
+                 <li class="nav-item">
+                     <a class="nav-link" href="{% url 'website:services' %}">Services</a>
+                 </li>
+                 <!--end nav-item-->
+                 <li class="nav-item">
+                     <a class="nav-link" href="{% url 'website:resume' %}">Resume</a>
+                 </li>
+                 <!--end nav-item-->
+                 <li class="nav-item">
+                     <a class="nav-link" href="{% url 'website:projects' %}">Projects</a>
+                 </li>
+                 <!--end nav-item-->
+                 <li class="nav-item">
+                     <a class="nav-link" href="{% url 'website:blogs' %}">Blogs</a>
+                 </li>
+                 <!--end nav-item-->
+                 <li class="nav-item">
+                     <a class="nav-link" href="{% url 'website:contact' %}">Contact</a>
+                 </li>
+                 <!--end nav-item-->
+             </ul>
+         </div><!-- end #navbarNav -->
+     </div><!-- end container -->
+ </nav>
+ <!-- end navbar -->

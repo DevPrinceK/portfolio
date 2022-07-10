@@ -1,0 +1,371 @@
+{% extends "website/base.html" %}
+{% load static %}
+{% block pagetitle %} About Me {% endblock %}
+
+{% block pagelabel %}
+<h5 class="head-title py-4" aria-label="About"></h5>
+{% endblock %}
+
+
+{% block content %}
+<!-- start about -->
+<section class="section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 align-self-center">
+                <img src="{% static 'images/personal/kps.png' %}" alt="" class="img-fluid ml-lg-5">
+            </div>
+            <!--end col-->
+            <div class="col-lg-6 ms-auto align-self-center">
+                <h5 class="fs-24 text-dark fw-medium mb-3">Personal Details</h5>
+                <h4 class="fw-normal lh-base text-gray-700 mb-5 fs-20">I am an individual looking to work in an
+                    organization where I will use my superpowers (technological abilities) to help improve
+                    productivity, create tools and scripts to make our lives easier.
+                </h4>
+
+                <div class="mb-5 mb-lg-0">
+                    <p class="mb-2">
+                        <span class="personal-detail-title">Date of birth</span>
+                        <span class="personal-detail-info">05 Feb 1997</span>
+                    </p>
+                    <p class="mb-2">
+                        <span class="personal-detail-title">Spoken Langages</span>
+                        <span class="personal-detail-info">English - Akan - Ewe</span>
+                    </p>
+                    <p class="mb-2">
+                        <span class="personal-detail-title">Nationality</span>
+                        <span class="personal-detail-info">Ghanaian</span>
+                    </p>
+                    <p class="mb-2">
+                        <span class="personal-detail-title">Interest</span>
+                        <span class="personal-detail-info">Music, Reading, Coding, Music</span>
+                    </p>
+                    <p class="mb-2">
+                        <span class="personal-detail-title">Traits</span>
+                        <span class="personal-detail-info">Analytical, Agile, Reasonable, Determined</span>
+                    </p>
+                </div>
+                <div class="social mt-5">
+                    <a href="#">
+                        <i class="lab la-github github me-1"></i>
+                    </a>
+                    <a href="#">
+                        <i class="lab la-twitter twitter me-1"></i>
+                    </a>
+                    <a href="#">
+                        <i class="lab la-google google me-1"></i>
+                    </a>
+                    <a href="#">
+                        <i class="lab la-linkedin-in linkedin me-1"></i>
+                    </a>
+                </div>
+            </div>
+            <!--end col-->
+            <div class="col-12 mt-5">
+                <div class="d-flex flex-wrap justify-content-center mt-4 mt-md-5">
+                    <div class="mx-3 ms-sm-0 ms-sm-0 mb-3 card-bg rounded p-1 pe-3 p-md-3 pe-md-4 shadow-sm">
+                        <div class="d-flex align-items-center">
+                            <div class="thumb-md d-flex flex-wrap justify-content-center align-items-center">
+                                <img src="{% static 'images/python-5.svg' %}" alt="" class="" height="34">
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="mb-0 fw-medium text-gray-700">Python</h6>
+                                <p class="text-muted mb-0 fs-12">2 Year Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/div-->
+                    <div class="mx-3 ms-sm-0 ms-sm-0 mb-3 card-bg rounded p-1 pe-3 p-md-3 pe-md-4 shadow-sm">
+                        <div class="d-flex align-items-center">
+                            <div class="thumb-md d-flex flex-wrap justify-content-center align-items-center">
+                                <img src="{% static 'images/django.svg' %}" alt="" class="" height="34">
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="mb-0 fw-medium text-gray-700">Django</h6>
+                                <p class="text-muted mb-0 fs-12">1 Year Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/div-->
+                    <div class="mx-3 ms-sm-0 ms-sm-0 mb-3 card-bg rounded p-1 pe-3 p-md-3 pe-md-4 shadow-sm">
+                        <div class="d-flex align-items-center">
+                            <div class="thumb-md d-flex flex-wrap justify-content-center align-items-center">
+                                <img src="{% static 'images/logos/bootstrap.svg' %}" alt="" class="" height="34">
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="mb-0 fw-medium text-gray-700">Bootstrap</h6>
+                                <p class="text-muted mb-0 fs-12">1.5 Year Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/div-->
+                    <div class="mx-3 ms-sm-0 ms-sm-0 mb-3 card-bg rounded p-1 pe-3 p-md-3 pe-md-4 shadow-sm">
+                        <div class="d-flex align-items-center">
+                            <div class="thumb-md d-flex flex-wrap justify-content-center align-items-center">
+                                <img src="{% static 'images/mysql-svgrepo-com.svg' %}" alt="" class="" height="34">
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="mb-0 fw-medium text-gray-700">SQL</h6>
+                                <p class="text-muted mb-0 fs-12">1 Year Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/div-->
+                    <div class="mx-3 ms-sm-0 ms-sm-0 mb-3 card-bg rounded p-1 pe-3 p-md-3 pe-md-4 shadow-sm">
+                        <div class="d-flex align-items-center">
+                            <div class="thumb-md d-flex flex-wrap justify-content-center align-items-center">
+                                <img src="{% static 'images/postgresql-inc.svg' %}" alt="" class="" height="34">
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="mb-0 fw-medium text-gray-700">Postgresql</h6>
+                                <p class="text-muted mb-0 fs-12">8 Months Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/div-->
+                    <div class="mx-3 ms-sm-0 ms-sm-0 mb-3 card-bg rounded p-1 pe-3 p-md-3 pe-md-4 shadow-sm">
+                        <div class="d-flex align-items-center">
+                            <div class="thumb-md d-flex flex-wrap justify-content-center align-items-center">
+                                <img src="{% static 'images/digitalocean-icon-1.svg' %}" alt="" class="" height="34">
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="mb-0 fw-medium text-gray-700">DigitalOCean</h6>
+                                <p class="text-muted mb-0 fs-12">6 Months Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/div-->
+                    <div class="mx-3 ms-sm-0 ms-sm-0 mb-3 card-bg rounded p-1 pe-3 p-md-3 pe-md-4 shadow-sm">
+                        <div class="d-flex align-items-center">
+                            <div class="thumb-md d-flex flex-wrap justify-content-center align-items-center">
+                                <img src="{% static 'images/github-icon-1.svg' %}" alt="" class="" height="34">
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="mb-0 fw-medium text-gray-700">Github</h6>
+                                <p class="text-muted mb-0 fs-12">2 Year Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/div-->
+                    <div class="mx-3 ms-sm-0 ms-sm-0 mb-3 card-bg rounded p-1 pe-3 p-md-3 pe-md-4 shadow-sm">
+                        <div class="d-flex align-items-center">
+                            <div class="thumb-md d-flex flex-wrap justify-content-center align-items-center">
+                                <img src="{% static 'images/html-1.svg' %}" alt="" class="" height="34">
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="mb-0 fw-medium text-gray-700">HTML CSS</h6>
+                                <p class="text-muted mb-0 fs-12">2 Months Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/div-->
+                    <!--/div-->
+                    <div class="mx-3 ms-sm-0 ms-sm-0 mb-3 card-bg rounded p-1 pe-3 p-md-3 pe-md-4 shadow-sm">
+                        <div class="d-flex align-items-center">
+                            <div class="thumb-md d-flex flex-wrap justify-content-center align-items-center">
+                                <img src="{% static 'images/logos/nodejs-icon.svg' %}" alt="" class="" height="34">
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="mb-0 fw-medium text-gray-700">JavaScript</h6>
+                                <p class="text-muted mb-0 fs-12">1.5 Months Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/div-->
+                    <!--/div-->
+                    <div class="mx-3 ms-sm-0 ms-sm-0 mb-3 card-bg rounded p-1 pe-3 p-md-3 pe-md-4 shadow-sm">
+                        <div class="d-flex align-items-center">
+                            <div class="thumb-md d-flex flex-wrap justify-content-center align-items-center">
+                                <img src="{% static 'images/apache-13.svg' %}" alt="" class="" height="34">
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="mb-0 fw-medium text-gray-700">Apache</h6>
+                                <p class="text-muted mb-0 fs-12">3 Months Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/div-->
+                </div><!-- End div -->
+            </div><!-- End Col -->
+        </div>
+        <!--end row-->
+    </div>
+    <!-- end container -->
+</section>
+<!-- end about -->
+
+<!-- start resume -->
+<section class="section">
+    <div class="container">
+        <div class="row justify-content-center mb-4">
+            <div class="col-12 col-md-10 col-lg-7 text-center">
+                <span class="badge badge-lg rounded bg-soft-alt-success fw-normal fs-13 text-uppercase">Life
+                    Time</span>
+                <h2 class="fs-2 fw-medium lh-1 text-dark my-3 position-relative z-i-2">Education & Experience</h2>
+                <div class="bg-text">
+                    <h1 class="fw-bold p-0">Resume</h1>
+                </div>
+                <p class="text-gray-700 fs-18 fs-lg mb-4 mb-md-5 lh-lg">
+                    What I am good at, what I have been up to, what I like doing. All About me!
+                </p>
+            </div>
+            <!--end col-->
+        </div>
+        <!--end row-->
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="main-timeline">
+                            <div class="timeline">
+                                <a href="#" class="timeline-content">
+                                    <div class="timeline-icon">
+                                        <i class="ti ti-trophy"></i>
+                                    </div>
+                                    <div class="inner-content">
+                                        <h3 class="title">Bsc. Computer Science</h3>
+                                        <p class="description">
+                                            Currently reading Computer Science in the
+                                            University of Ghana. Level 300.
+                                        </p>
+                                    </div>
+                                    <div class="timeline-year"><span>2019-Date</span></div>
+                                </a>
+                            </div>
+                            <div class="timeline">
+                                <a href="#" class="timeline-content">
+                                    <div class="timeline-icon">
+                                        <i class="ti ti-school"></i>
+                                    </div>
+                                    <div class="inner-content">
+                                        <h3 class="title">Proficiency in IT Skills</h3>
+                                        <p class="description">
+                                            Took a three month course in IT Proficiency skills. Learnt basic concepts
+                                            and skills in computing.
+                                        </p>
+                                    </div>
+                                    <div class="timeline-year"><span>2018 - 2018</span></div>
+                                </a>
+                            </div>
+                            <div class="timeline">
+                                <a href="#" class="timeline-content">
+                                    <div class="timeline-icon">
+                                        <i class="ti ti-trophy"></i>
+                                    </div>
+                                    <div class="inner-content">
+                                        <h3 class="title">Senior High School</h3>
+                                        <p class="description">
+                                            Did my high school course at Tashtech,
+                                            where I read general arts with the options: Elective
+                                            Mathematics, Economics, Geography, Government.
+                                        </p>
+                                    </div>
+                                    <div class="timeline-year"><span>2015-2018</span></div>
+                                </a>
+                            </div>
+                            <div class="timeline">
+                                <a href="#" class="timeline-content">
+                                    <div class="timeline-icon">
+                                        <i class="ti ti-users"></i>
+                                    </div>
+                                    <div class="inner-content">
+                                        <h3 class="title">Mini Project - Team Lead</h3>
+                                        <p class="description">
+                                            Lead a team of 10 to design, develop
+                                            and deploy 'render' and platform where unskilled labour can find
+                                            jobs suited for them.
+                                        </p>
+                                    </div>
+                                    <div class="timeline-year"><span>2022-2022</span></div>
+                                </a>
+                            </div>
+                            <div class="timeline">
+                                <a href="#" class="timeline-content">
+                                    <div class="timeline-icon">
+                                        <i class="ti ti-trophy"></i>
+                                    </div>
+                                    <div class="inner-content">
+                                        <h3 class="title">Software Developer</h3>
+                                        <p class="description">
+                                            Designed, developed and deployed an
+                                            electronic voting platform for Tashtech, an SHS based in Ghana -
+                                            Oti Region.
+                                        </p>
+                                    </div>
+                                    <div class="timeline-year"><span>2022-2022</span></div>
+                                </a>
+                            </div>
+                            <div class="timeline">
+                                <a href="#" class="timeline-content">
+                                    <div class="timeline-icon">
+                                        <i class="ti ti-trophy"></i>
+                                    </div>
+                                    <div class="inner-content">
+                                        <h3 class="title">Software Developer</h3>
+                                        <p class="description">
+                                            Joined PayHub Ghana Limited, a fintech
+                                            company as a software developer.
+                                        </p>
+                                    </div>
+                                    <div class="timeline-year"><span>2022-2022</span></div>
+                                </a>
+                            </div>
+                            <div class="timeline">
+                                <a href="#" class="timeline-content">
+                                    <div class="timeline-icon">
+                                        <i class="ti ti-trophy"></i>
+                                    </div>
+                                    <div class="inner-content">
+                                        <h3 class="title">Freelance Developer</h3>
+                                        <p class="description">
+                                            Was the sole developer who designed,
+                                            developed and deployed a product advertisement platform for
+                                            Jamilahome Limited.
+                                        </p>
+                                    </div>
+                                    <div class="timeline-year"><span>2022-2022</span></div>
+                                </a>
+                            </div>
+                            <div class="timeline">
+                                <a href="#" class="timeline-content">
+                                    <div class="timeline-icon">
+                                        <i class="ti ti-trophy"></i>
+                                    </div>
+                                    <div class="inner-content">
+                                        <h3 class="title">Fullstack Developer</h3>
+                                        <p class="description">
+                                            Was part of a 3-member group that
+                                            designed, developed and deployed a multi-vendor ecommerce
+                                            platform for Techstuff.
+                                        </p>
+                                    </div>
+                                    <div class="timeline-year"><span>2022-2022</span></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
+
+            </div>
+            <!-- end col -->
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+</section>
+<!-- end resume -->
+
+<div class="position-relative">
+    <div class="shape overflow-hidden text-light">
+        <svg viewBox="0 0 2880 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M110 105L2160 0H2880V150H0V105H110Z" fill="currentColor"></path>
+        </svg>
+    </div>
+</div>
+
+{% include 'website/get_in_touch.html' %}
+
+
+{% endblock %}

@@ -1,166 +1,114 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>devprincek - Resume</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Portfoio and block site for devprince k" />
-    <meta name="keywords" content="devprincek, devprince, portfolio, resume, personal blog site, blogpost, blogsite" />
+    <meta charset="utf-8" />
+    <title>devprincek - {% block pagetitle %} {% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="portfolio site for devprincek. Founder of KPSTechnologies" />
+    <meta name="keywords" content="KPSTechnologies, devprincek, portfolio site, freelancer" />
     <meta name="author" content="devprincek" />
 
-    <!-- load static files for django -->
     {% load static %}
-    <link rel="shortcut icon" href="favicon.ico">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{% static 'images/logos/devprincek-sm.ico' %}" />
 
+    <!-- css -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/style-dark.min.css' %}" rel="stylesheet" type="text/css" />
 
-    <link rel="stylesheet" href="{% static 'css/reset.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/animations.css' %}" type="text/css">
-    <!-- bootstrap -->
-    <!-- extra css -->
-    <link rel="stylesheet" href="{% static 'css/extra.css' %}" type="text/css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    <!-- colors -->
+    <link href="{% static 'css/colors/default.css' %}" rel="stylesheet" type="text/css" id="color-opt" />
 </head>
 
-<body>
-    <!-- Animated Background -->
-    <div class="lm-animated-bg" style="background-image: url({% static 'img/code_bg_1.jpg' %});"></div>
-    <!-- /Animated Background -->
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="80">
+    <!-- start navbar -->
+    {% include "website/navbar.html" %}
+    <!-- end navbar -->
 
-    <div class="half-bg"></div>
-
-    <div class="page">
-        <div class="page-content">
-
-            <header id="site_header" class="header mobile-menu-hide">
-                <div class="header-content">
-                    <div class="header-lng">
-                        <ul>
-                            <li>
-                                <a href="javascript:void(0)" class="active"> <i class="lnr lnr-sun"></i> </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)"> <span class="lnr lnr-moon"></span> </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="header-photo">
-                        <!-- <img src="{% static 'img/main_photo.jpg' %}" alt="devprincek"> -->
-                        <img src="{% static 'img/mine/mine1.png' %}" alt="devprincek">
-                    </div>
-                    <div class="header-titles">
-                        <!-- <h2>Prince Kyeremanteng</h2> -->
-                        <h2>devprincek</h2>
-                        <h4>Web Developer</h4>
-                    </div>
+    <!-- start hero -->
+    <section class="hero-one position-relative bg-black" id="about" style="background-image: url({% static 'images/personal/main-bg.png' %}); background-size: cover;
+        background-position: center center;">
+        <div class="container">
+            <div class="row align-items-center justify-content-center py-100">
+                <div class="col-lg-7 text-center py-5 text-center">
+                    {% block pagelabel %}
+                    <h5 class="head-title py-4" aria-label="Contact"></h5>
+                    {% endblock %}
                 </div>
-
-                {% block menu %}
-                <ul class="main-menu">
-                    <li>
-                        <a href="#about-me" class="nav-anim">
-                            <span class="menu-icon lnr lnr-user"></span>
-                            <span class="link-text">About Me</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#resume" class="nav-anim">
-                            <span class="menu-icon lnr lnr-graduation-hat"></span>
-                            <span class="link-text">Resume</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#portfolio" class="nav-anim">
-                            <span class="menu-icon lnr lnr-briefcase"></span>
-                            <span class="link-text">My Works</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#blog" class="nav-anim">
-                            <span class="menu-icon lnr lnr-book"></span>
-                            <span class="link-text">Blog</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#contact" class="nav-anim">
-                            <span class="menu-icon lnr lnr-envelope"></span>
-                            <span class="link-text">Contact</span>
-                        </a>
-                    </li>
-                </ul>
-                {% endblock %}
-
-                <div class="social-links">
-                    <ul>
-                        <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/prince-samuel-941956165" target="_blank"><i
-                                    class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                    </ul>
-                </div>
-
-                <div class="info-list">
-                    <ul>
-                        <li>
-                            <span class="value">+233 (0)558366133</span>
-                        </li>
-
-                        <li>
-                            <span class="value"><a
-                                    href="mailto:princesamuelpks@gmail.com">prince@devprincek.me</a></span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="header-buttons">
-                    <a href="#" target="_blank" class="btn btn-primary">Download CV</a>
-                </div>
-
-                <div class="copyrights">© 2022 All rights reserved. <a href="">devprincek</a> </div>
-
-            </header>
-
-            <!-- Mobile Navigation -->
-            <div class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+                <!--end col-->
             </div>
-            <!-- End Mobile Navigation -->
-
-            <!-- Arrows Nav -->
-            <div class="lmpixels-arrows-nav">
-                <div class="lmpixels-arrow-right"><i class="lnr lnr-chevron-right"></i></div>
-                <div class="lmpixels-arrow-left"><i class="lnr lnr-chevron-left"></i></div>
-            </div>
-            <!-- End Arrows Nav -->
-
-            {% block content %}
-            {% endblock %}
-
+            <!--end row-->
+        </div>
+        <!-- end container -->
+    </section>
+    <!-- end hero -->
+    <div class="position-relative">
+        <div class="shape overflow-hidden text-white">
+            <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+            </svg>
         </div>
     </div>
 
-    <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/modernizr.custom.js' %}"></script>
-    <script src="{% static 'js/animating.js' %}"></script>
+    <!-- content goes here -->
+    {% block content %}
+    {% endblock %}
+    <!-- end content -->
 
-    <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
-    <!-- <script src='https://www.google.com/recaptcha/api.js'></script> -->
 
-    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
-    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
-    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
 
-    <script src="{% static 'js/validator.js' %}"></script>
-    <script src="{% static 'js/main.js' %}"></script>
+
+    <div class="position-relative">
+        <div class="shape overflow-hidden bg-footer">
+            <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+            </svg>
+        </div>
+    </div>
+
+    <!-- start footer -->
+    {% include "website/footer.html" %}
+    <!-- end footer -->
+
+    <!-- Style switcher -->
+    <div id="style-switcher" onclick="toggleSwitcher()">
+        <div>
+            <h3 class="fw-medium mb-0">Select Your Choice</h3>
+            <hr class="hr-dashed my-3">
+            <ul class="pattern">
+                <li>
+                    <a class="color1" href="javascript: void(0);" onclick="setColor('default')"></a>
+                </li>
+                <li>
+                    <a class="color2" href="javascript: void(0);" onclick="setColor('info')"></a>
+                </li>
+                <li>
+                    <a class="color3" href="javascript: void(0);" onclick="setColor('warning')"></a>
+                </li>
+                <li>
+                    <a class="color4" href="javascript: void(0);" onclick="setColor('orange')"></a>
+                </li>
+                <li>
+                    <a class="color5" href="javascript: void(0);" onclick="setColor('purple')"></a>
+                </li>
+                <li>
+                    <a class="color6" href="javascript: void(0);" onclick="setColor('success')"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="bottom">
+            <a href="javascript: void(0);" class="settings rounded-end"><i class="las la-paint-brush fs-22"></i></a>
+        </div>
+    </div>
+    <!-- end Style switcher -->
+
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/simplebar.min.js' %}"></script>
+    <script src="{% static 'js/feather.js' %}"></script>
+    <script src="{% static 'js/shuffle.min.js' %}"></script>
+    <script src="{% static 'js/projects.init.js' %}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
 </body>
 
 </html>

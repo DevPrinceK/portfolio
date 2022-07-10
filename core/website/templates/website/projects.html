@@ -1,0 +1,27 @@
+{% extends "website/base.html" %}
+{% load static %}
+{% block pagetitle %} Projects {% endblock %}
+
+{% block pagelabel %}
+<h5 class="head-title py-4" aria-label="Projects"></h5>
+{% endblock %}
+<!-- start resume -->
+{% block content %}
+{% include 'website/projects_block.html' %}
+<!-- end resume -->
+
+
+
+<div class="position-relative">
+    <div class="shape overflow-hidden text-light">
+        <svg viewBox="0 0 2880 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M110 105L2160 0H2880V150H0V105H110Z" fill="currentColor"></path>
+        </svg>
+    </div>
+</div>
+
+{% include 'website/get_in_touch.html' %}
+
+{% endblock %}
+
+<script src="{% static 'js/projects.init.js' %}"></script>

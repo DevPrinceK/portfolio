@@ -1,0 +1,105 @@
+{% extends "website/base.html" %}
+{% load static %}
+{% block pagetitle %} Resume {% endblock %}
+
+{% block pagelabel %}
+<h5 class="head-title py-4" aria-label="Resume"></h5>
+{% endblock %}
+<!-- start resume -->
+{% block content %}
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="main-timeline">
+                            <div class="timeline">
+                                <a href="#" class="timeline-content">
+                                    <div class="timeline-icon">
+                                        <i class="ti ti-trophy"></i>
+                                    </div>
+                                    <div class="inner-content">
+                                        <h3 class="title">GHI Themes - Web & App IT Company</h3>
+                                        <p class="description">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada
+                                            tellus lorem, et condimentum neque commodo
+                                        </p>
+                                    </div>
+                                    <div class="timeline-year"><span>2019-22</span></div>
+                                </a>
+                            </div>
+                            <div class="timeline">
+                                <a href="#" class="timeline-content">
+                                    <div class="timeline-icon">
+                                        <i class="ti ti-users"></i>
+                                    </div>
+                                    <div class="inner-content">
+                                        <h3 class="title">ABC themes - Web Design IT Company</h3>
+                                        <p class="description">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada
+                                            tellus lorem, et condimentum neque commodo
+                                        </p>
+                                    </div>
+                                    <div class="timeline-year"><span>2014-18</span></div>
+                                </a>
+                            </div>
+                            <div class="timeline">
+                                <a href="#" class="timeline-content">
+                                    <div class="timeline-icon">
+                                        <i class="ti ti-school"></i>
+                                    </div>
+                                    <div class="inner-content">
+                                        <h3 class="title">MSc IT Master Degree</h3>
+                                        <p class="description">
+                                            Harvard University is an educational institution that offers graduate,
+                                            professional, and research programs in the fields of and public health.
+                                        </p>
+                                    </div>
+                                    <div class="timeline-year"><span>2012-13</span></div>
+                                </a>
+                            </div>
+                            <div class="timeline">
+                                <a href="#" class="timeline-content">
+                                    <div class="timeline-icon">
+                                        <i class="ti ti-building"></i>
+                                    </div>
+                                    <div class="inner-content">
+                                        <h3 class="title">High / Higher secondary school</h3>
+                                        <p class="description">
+                                            Princeton University is an educational institution that offers graduate,
+                                            professional, and research programs in the fields of and public health.
+                                        </p>
+                                    </div>
+                                    <div class="timeline-year"><span>2007-08</span></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
+
+            </div>
+            <!-- end col -->
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+</section>
+<!-- end resume -->
+
+
+
+<div class="position-relative">
+    <div class="shape overflow-hidden text-light">
+        <svg viewBox="0 0 2880 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M110 105L2160 0H2880V150H0V105H110Z" fill="currentColor"></path>
+        </svg>
+    </div>
+</div>
+
+
+{% include 'website/get_in_touch.html' %}
+
+{% endblock %}

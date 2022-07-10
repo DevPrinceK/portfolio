@@ -4,5 +4,11 @@ from . import views
 app_name = 'website'
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
-    path('blog/', views.BlogView.as_view(), name='blog'),
+    path('blogs/', views.BlogsView.as_view(), name='blogs'),
+    path('blog/', views.BlogDetailView.as_view(), name='blog_detail'),
+    path('about/', views.AboutView.as_view(), name='about'),
+    path('contact/', views.ContactView.as_view(), name='contact'),
+    path('projects/', views.ProjectsView.as_view(), name='projects'),
+    path('resume/', views.ResumeView.as_view(), name='resume'),
+    path('services/', views.ServicesView.as_view(), name='services'),
 ]

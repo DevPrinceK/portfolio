@@ -1,0 +1,14 @@
+{% extends "website/base.html" %}
+{% load static %}
+{% block pagetitle %} Contact {% endblock %}
+
+{% block pagelabel %}
+<h5 class="head-title py-4" aria-label="Contact"></h5>
+{% endblock %}
+<!-- start resume -->
+{% block content %}
+{% include 'website/contact_form.html' %}
+<!-- end contact form -->
+
+
+{% endblock %}

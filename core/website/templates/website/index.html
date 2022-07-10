@@ -1,1016 +1,868 @@
-{% extends 'website/base.html' %}
-{% load static %}
-{% block content %}
-<div class="content-area">
-    <div class="animated-sections">
+<!DOCTYPE html>
+<html lang="en">
 
-        <!-- About Me Subpage -->
-        <section data-id="about-me" class="animated-section">
-            <div class="section-content">
+<head>
+    <meta charset="utf-8" />
+    <title>{% block pagetitle %} Home {% endblock %} </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Premium Bootstrap 5 Template" />
+    <meta name="keywords" content="bootstrap 5, premium, marketing, multipurpose" />
+    <meta content="Mannatthemes" name="author" />
 
-                <div class="row flex-v-align">
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                        <div class="home-text hp-left">
+    {% load static %}
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{% static 'images/logos/devprincek-sm.ico' %}" />
 
-                            <div class="owl-carousel text-rotation">
-                                <div class="item">
-                                    <h4>Web Developer</h4>
-                                </div>
-                                <div class="item">
-                                    <h4>Python Developer</h4>
-                                </div>
-                                <div class="item">
-                                    <h4>Backend Developer</h4>
-                                </div>
-                                <div class="item">
-                                    <h4>DevOpps Developer</h4>
-                                </div>
-                                <div class="item">
-                                    <h4>Fullstack Developer</h4>
-                                </div>
-                            </div>
+    <!-- css -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/style-dark.min.css' %}" rel="stylesheet" type="text/css" />
 
-                            <h1 class="text-white">Prince <span style="color: #559;">Kyeremanteng</span></h1>
-                            <p class="bg-ccc">I am an individual looking to work in an organization where I will use my
-                                <span style="color: gold;">superpowers</span> (technological abilities) to help improve
-                                productivity, create tools and scripts to make our lives easier. </p>
+    <!-- colors -->
+    <link href="{% static 'css/colors/default.css' %}" rel="stylesheet" type="text/css" id="color-opt" />
+</head>
 
-                            <div class="home-buttons">
-                                <a href="" target="_blank" class="btn btn-primary">Download CV</a>
-                                <a href="" target="_self" class="btn btn-secondary">Contact</a>
-                            </div>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="80">
+    <!-- start navbar -->
+    {% include "website/navbar.html" %}
+    <!-- end navbar -->
+
+    <!-- start hero -->
+    <section class="hero-one hero-video position-relative" id="home" style="background-image: url({% static 'images/personal/main-bg.png' %}); background-size: cover;
+        background-position: center center;">
+        <div class="bg-overlay"></div>
+        <div id="youtubeEmbed" class="hero_video" data-video-id="LBNDfxjEYlA"></div>
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+
+                <div class="col-lg-7 text-center px-0 px-xl-4 mt-5 mt-lg-0 pt-5 pt-lg-0">
+                    <h5 class="d-inline-block py-1 px-3 rounded text-muted font-secondary">Hi, I'm Prince Kyeremanteng
+                    </h5>
+                    <h1 class="hero-title mb-4 font-secondary fo">I'm a freelance
+                        <div class="position-relative d-inline-block" style="margin-bottom: -20px;" data-delay="2200"
+                            data-words>
+                            &nbsp;
+                            <span class="text-anim-items">
+                                <span class="text-anim-item px-2"><span>Django</span></span>
+                                <span class="text-anim-item px-2"><span>JS</span></span>
+                                <span class="text-anim-item px-2"><span>Python</span></span>
+                                <span class="text-anim-item px-2"><span>Web</span></span>
+                                <span class="text-anim-item px-2"><span>DevOp</span></span>
+                            </span>
+                            <span class="anim-line bg-orange"></span>
+                            </span>
                         </div>
-                    </div>
-
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                        <div class="home-photo">
-                            <div class="hp-inner" style="background-image: url({% static 'img/mine/mine1.png' %});">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="white-space-70"></div>
-
-                <!-- Fun Facts -->
-                <div class="row">
-                    <div class="col-xs-12 col-sm-4">
-                        <div class="fun-fact gray-default">
-                            <i class="lnr lnr-heart"></i>
-                            <h4>Happy Clients</h4>
-                            <span class="fun-fact-block-value">215</span>
-                            <span class="fun-fact-block-text"></span>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-4">
-                        <div class="fun-fact gray-default">
-                            <!-- <i class="lnr lnr-clock"></i> -->
-                            <i class="bi bi-bug"></i>
-                            <h4>Bugs Encountered</h4>
-                            <span class="fun-fact-block-value">1001+</span>
-                            <span class="fun-fact-block-text"></span>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-4 ">
-                        <div class="fun-fact gray-default">
-                            <i class="lnr lnr-star"></i>
-                            <h4>Bugs Fixed</h4>
-                            <span class="fun-fact-block-value">1001+</span>
-                            <span class="fun-fact-block-text"></span>
+                        Developer
+                    </h1>
+                    <span class="wrap"></span>
+                    <div class="mb-5 mb-lg-0">
+                        <div class="d-inline-block">
+                            <a href="#" class="btn btn-primary">Download CV</a>
                         </div>
                     </div>
                 </div>
-                <!-- End of Fun Facts -->
-
-
-
-                <div class="white-space-70"></div>
-
-                <!-- Services -->
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12">
-                        <div class="block-title">
-                            <h3 class="text-white">What I Do</h3>
-                        </div>
-                    </div>
+                <!--end col-->
+                <div class="col-lg-5 mx-auto mt-5">
+                    <img src="{% static 'images/personal/kps-3.png' %}" alt="" class="img-fluid ml-lg-5">
                 </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6">
-                        <div class="col-inner">
-                            <div class="info-list-w-icon">
-                                <div class="info-block-w-icon">
-                                    <div class="ci-icon">
-                                        <i class="lnr lnr-store"></i>
-                                    </div>
-                                    <div class="ci-text bg-ccc">
-                                        <h4 class="text-white">Ecommerce</h4>
-                                        <p>I design an build fast, safe, comprehensive and search engine optimised
-                                            ecommerce sites </p>
-                                    </div>
-                                </div>
-                                <div class="info-block-w-icon">
-                                    <div class="ci-icon">
-                                        <i class="lnr lnr-store"></i>
-                                    </div>
-                                    <div class="ci-text bg-ccc">
-                                        <h4 class="text-white">Management System</h4>
-                                        <p>I build all kinds of management systems such as School Management System,
-                                            Hospital Management System, Hall Management System etc.</p>
-                                    </div>
-                                </div>
-                                <div class="info-block-w-icon">
-                                    <div class="ci-icon">
-                                        <i class="lnr lnr-store"></i>
-                                    </div>
-                                    <div class="ci-text bg-ccc">
-                                        <h4 class="text-white">API Development</h4>
-                                        <p>I design secured APIs to connect your database to your frontend or any other
-                                            software that may need access to your database. I use latest tools to make
-                                            your system secured.</p>
-                                    </div>
-                                </div>
-                                <div class="info-block-w-icon">
-                                    <div class="ci-icon">
-                                        <i class="lnr lnr-laptop-phone"></i>
-                                    </div>
-                                    <div class="ci-text bg-ccc">
-                                        <h4 class="text-white">Web Development</h4>
-                                        <p>I do different kinds of web developments including, websites, survey systems,
-                                            to evoting platforms etc.</p>
-                                    </div>
-                                </div>
-                                <div class="info-block-w-icon">
-                                    <div class="ci-icon">
-                                        <i class="lnr lnr-laptop-phone"></i>
-                                    </div>
-                                    <div class="ci-text bg-ccc">
-                                        <h4 class="text-white">Cloud Hosting</h4>
-                                        <p>I host web services like websites, web applications, APIs in the cloud for
-                                            you. I use platforms like DigitalOcean, AWS, Azure, Heroku etc. </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-6">
-                        <div class="col-inner">
-                            <div class="info-list-w-icon">
-                                <div class="info-block-w-icon">
-                                    <div class="ci-icon">
-                                        <i class="lnr lnr-pencil"></i>
-                                    </div>
-                                    <div class="ci-text bg-ccc">
-                                        <h4 class="text-white">Tech Writing</h4>
-                                        <p>I write tech articles from how to write your first function to deploying your
-                                            system onto the cloud. </p>
-                                    </div>
-                                </div>
-                                <div class="info-block-w-icon">
-                                    <div class="ci-icon">
-                                        <i class="lnr lnr-flag"></i>
-                                    </div>
-                                    <div class="ci-text bg-ccc">
-                                        <h4 class="text-white">Tech Training</h4>
-                                        <p>I teach people to technology. How to Code, best prisciples in Coding,
-                                            Software Engineering etc.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End of Services -->
-
-                <div class="white-space-50"></div>
-
-                <!-- Testimonials -->
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12">
-                        <div class="block-title">
-                            <h3 class="text-white">Testimonials</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12">
-                        <div class="testimonials owl-carousel">
-                            <!-- Testimonial 1 -->
-                            <div class="testimonial">
-                                <div class="img">
-                                    <img src="{% static 'img/testimonials/testimonial-1.jpg' %}" alt="devprincek">
-                                </div>
-                                <div class="text">
-                                    <p>Vivamus at molestie dui, eu ornare orci. Curabitur vel egestas dolor.
-                                        Nulla condimentum nunc sit amet urna tempus finibus. Duis mollis leo
-                                        id ligula pellentesque, at vehicula dui ultrices.</p>
-                                </div>
-
-                                <div class="author-info">
-                                    <h4 class="author">Julia Hickman</h4>
-                                    <h5 class="company">Omni Source</h5>
-                                    <div class="icon">
-                                        <i class="fas fa-quote-right"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End of Testimonial 1 -->
-
-                            <!-- Testimonial 2 -->
-                            <div class="testimonial">
-                                <div class="img">
-                                    <img src="{% static 'img/testimonials/testimonial-2.jpg' %}" alt="devprincek">
-                                </div>
-                                <div class="text">
-                                    <p>Vivamus at molestie dui, eu ornare orci. Curabitur vel egestas dolor.
-                                        Nulla condimentum nunc sit amet urna tempus finibus. Duis mollis leo
-                                        id ligula pellentesque, at vehicula dui ultrices.</p>
-                                </div>
-
-                                <div class="author-info">
-                                    <h4 class="author">Robert Watkins</h4>
-                                    <h5 class="company">Endicott Shoes</h5>
-                                    <div class="icon">
-                                        <i class="fas fa-quote-right"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End of Testimonial 2 -->
-
-                            <!-- Testimonial 3 -->
-                            <div class="testimonial">
-                                <div class="img">
-                                    <img src="{% static 'img/testimonials/testimonial-3.jpg' %}" alt="devprincek">
-                                </div>
-                                <div class="text">
-                                    <p>Vivamus at molestie dui, eu ornare orci. Curabitur vel egestas dolor.
-                                        Nulla condimentum nunc sit amet urna tempus finibus. Duis mollis leo
-                                        id ligula pellentesque, at vehicula dui ultrices.</p>
-                                </div>
-
-                                <div class="author-info">
-                                    <h4 class="author">Kristin Carroll</h4>
-                                    <h5 class="company">Helping Hand</h5>
-                                    <div class="icon">
-                                        <i class="fas fa-quote-right"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End of Testimonial 3 -->
-                        </div>
-                    </div>
-                </div>
-                <!-- End of Testimonials -->
-
-                <div class="white-space-70"></div>
-
-                <!-- Clients -->
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12">
-                        <div class="block-title">
-                            <h3 class="text-white">Cilents</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12">
-                        <div class="clients owl-carousel">
-
-                            <div class="client-block">
-                                <a href="#" target="_blank" title="Logo">
-                                    <img src="{% static 'img/clients/client-1.png' %}" alt="Logo">
-                                </a>
-                            </div>
-
-                            <div class="client-block">
-                                <a href="#" target="_blank" title="Logo">
-                                    <img src="{% static 'img/clients/client-2.png' %}" alt="Logo">
-                                </a>
-                            </div>
-
-                            <div class="client-block">
-                                <a href="#" target="_blank" title="Logo">
-                                    <img src="{% static 'img/clients/client-3.png' %}" alt="Logo">
-                                </a>
-                            </div>
-
-                            <div class="client-block">
-                                <a href="#" target="_blank" title="Logo">
-                                    <img src="{% static 'img/clients/client-4.png' %}" alt="Logo">
-                                </a>
-                            </div>
-
-                            <div class="client-block">
-                                <a href="#" target="_blank" title="Logo">
-                                    <img src="{% static 'img/clients/client-5.png' %}" alt="Logo">
-                                </a>
-                            </div>
-
-                            <div class="client-block">
-                                <a href="#" target="_blank" title="Logo">
-                                    <img src="{% static 'img/clients/client-6.png' %}" alt="Logo">
-                                </a>
-                            </div>
-
-                            <div class="client-block">
-                                <a href="#" target="_blank" title="Logo">
-                                    <img src="{% static 'img/clients/client-7.png' %}" alt="Logo">
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <!-- End of Clients -->
-
-                <div class="white-space-70"></div>
+                <!--end col-->
             </div>
-        </section>
-        <!-- End of About Me Subpage -->
-
-        <!-- Resume Subpage -->
-        <section data-id="resume" class="animated-section">
-            <div class="section-content">
-                <div class="page-title">
-                    <h2 class="text-white">Resume</h2>
-                    <h4 class="text-white">2 Years of Experience</h4>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-7">
-
-                        <div class="block-title">
-                            <h3 class="text-white">Education</h3>
-                        </div>
-
-                        <div class="timeline timeline-second-style clearfix">
-                            <div class="timeline-item clearfix">
-                                <div class="left-part">
-                                    <h5 class="item-period">2019 - Date</h5>
-                                    <span class="item-company">University of Ghana</span>
-                                </div>
-                                <div class="divider"></div>
-                                <div class="right-part">
-                                    <h4 class="item-title">Bsc. Computer Science</h4>
-                                    <p class="text-white">Currently reading Computer Science in the University of Ghana.
-                                        Level
-                                        300</p>
-                                </div>
-                            </div>
-
-                            <div class="timeline-item clearfix">
-                                <div class="left-part">
-                                    <h5 class="item-period">2018</h5>
-                                    <span class="item-company">Bridge IT</span>
-                                </div>
-                                <div class="divider"></div>
-                                <div class="right-part">
-                                    <h4 class="item-title">Proficiency in IT Skills</h4>
-                                    <p class="text-white">Took a three month course in IT.</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item clearfix">
-                                <div class="left-part">
-                                    <h5 class="item-period">2015 - 2018</h5>
-                                    <span class="item-company">Tapaman Senior High School</span>
-                                </div>
-                                <div class="divider"></div>
-                                <div class="right-part">
-                                    <h4 class="item-title">General Arts</h4>
-                                    <p class="text-white">Did my high school course at Tashtech, where I read general
-                                        arts with
-                                        the options: Elective Mathematics, Economics, Geography, Government.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="white-space-50"></div>
-
-                        <div class="block-title">
-                            <h3 class="text-white">Experience</h3>
-                        </div>
-
-                        <div class="timeline timeline-second-style clearfix">
-                            <div class="timeline-item clearfix">
-                                <div class="left-part">
-                                    <h5 class="item-period">2022</h5>
-                                    <span class="item-company">Mini Project Course</span>
-                                </div>
-                                <div class="divider"></div>
-                                <div class="right-part">
-                                    <h4 class="item-title">Team Lead</h4>
-                                    <p class="text-white">Lead a team of 10 to design, develop and deploy 'render' and
-                                        platform
-                                        where unskilled labour can find jobs suited for them.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="timeline-item clearfix">
-                                <div class="left-part">
-                                    <h5 class="item-period">2022</h5>
-                                    <span class="item-company">Techstuff GH Limited</span>
-                                </div>
-                                <div class="divider"></div>
-                                <div class="right-part">
-                                    <h4 class="item-title">Developer</h4>
-                                    <p class="text-white">Was part of a 3-member group that designed, developed and
-                                        deployed a
-                                        multi-vendor ecommerce platform for Techstuff.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="timeline-item clearfix">
-                                <div class="left-part">
-                                    <h5 class="item-period">2022</h5>
-                                    <span class="item-company">PayHub Ghana Limited</span>
-                                </div>
-                                <div class="divider"></div>
-                                <div class="right-part">
-                                    <h4 class="item-title">Developer</h4>
-                                    <p class="text-white">Was part of a 2-member group that designed, developed and
-                                        deployed a
-                                        payment gateway platform for PayHub Ghana, a fintech company based
-                                        in Ghana.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="timeline-item clearfix">
-                                <div class="left-part">
-                                    <h5 class="item-period">2022</h5>
-                                    <span class="item-company">Jamilahome Limited</span>
-                                </div>
-                                <div class="divider"></div>
-                                <div class="right-part">
-                                    <h4 class="item-title">Developer</h4>
-                                    <p class="text-white">Was the sole developer who designed, developed and deployed a
-                                        product
-                                        advertisement platform for Jamilahome Limited.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="timeline-item clearfix">
-                                <div class="left-part">
-                                    <h5 class="item-period">2022</h5>
-                                    <span class="item-company">Tapaman Senior High School</span>
-                                </div>
-                                <div class="divider"></div>
-                                <div class="right-part">
-                                    <h4 class="item-title">Developer</h4>
-                                    <p class="text-white">Designed, developed and deployed an electronic voting platform
-                                        for
-                                        Tashtech, an SHS based in Ghana - Oti Region.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="timeline-item clearfix">
-                                <div class="left-part">
-                                    <h5 class="item-period">2021 - Date</h5>
-                                    <span class="item-company">PayHub Ghana Ltd</span>
-                                </div>
-                                <div class="divider"></div>
-                                <div class="right-part">
-                                    <h4 class="item-title">Developer</h4>
-                                    <p class="text-white">Joined PayHub Ghana Ltd as a Fullstack Developer.</p>
-                                </div>
-                            </div>
-
-                            <div class="timeline-item clearfix">
-                                <div class="left-part">
-                                    <h5 class="item-period">2020</h5>
-                                    <span class="item-company">Bridge IT</span>
-                                </div>
-                                <div class="divider"></div>
-                                <div class="right-part">
-                                    <h4 class="item-title">IT Instructor</h4>
-                                    <p class="text-white">Served as an IT instructor for Bridge IT in the Oti Region.
-                                        Introduced students to basic computing concepts.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Skills & Certificates -->
-                    <div class="col-xs-12 col-sm-5">
-                        <!-- Design Skills -->
-                        <div class="block-title">
-                            <h3 class="text-white">Design Skills</h3>
-                        </div>
-
-                        <div class="skills-info skills-second-style">
-                            <!-- Skill 1 -->
-                            <div class="skill clearfix">
-                                <h4>Web Design</h4>
-                                <div class="skill-value">90%</div>
-                            </div>
-                            <div class="skill-container skill-1">
-                                <div class="skill-percentage"></div>
-                            </div>
-                            <!-- End of Skill 1 -->
-
-                            <!-- Skill 2 -->
-                            <div class="skill clearfix">
-                                <h4>Flyer Design</h4>
-                                <div class="skill-value">65%</div>
-                            </div>
-                            <div class="skill-container skill-2">
-                                <div class="skill-percentage"></div>
-                            </div>
-                            <!-- End of Skill 2 -->
-
-                            <!-- Skill 3 -->
-                            <div class="skill clearfix">
-                                <h4>Logo Design</h4>
-                                <div class="skill-value">80%</div>
-                            </div>
-                            <div class="skill-container skill-3">
-                                <div class="skill-percentage"></div>
-                            </div>
-                            <!-- End of Skill 3 -->
-
-                            <!-- Skill 4 -->
-                            <div class="skill clearfix">
-                                <h4>Graphic Design</h4>
-                                <div class="skill-value">85%</div>
-                            </div>
-                            <div class="skill-container skill-4">
-                                <div class="skill-percentage"></div>
-                            </div>
-                            <!-- End of Skill 4 -->
-
-                        </div>
-                        <!-- End of Design Skills -->
-
-                        <div class="white-space-10"></div>
-
-                        <!-- Coding Skills -->
-                        <div class="block-title">
-                            <h3 class="text-white">Coding Skills</h3>
-                        </div>
-
-                        <div class="skills-info skills-second-style">
-                            <!-- Skill 5 -->
-                            <div class="skill clearfix">
-                                <h4>Python</h4>
-                                <div class="skill-value">90%</div>
-                            </div>
-                            <div class="skill-container skill-5">
-                                <div class="skill-percentage"></div>
-                            </div>
-                            <!-- End of Skill 5 -->
-                            <!-- Skill 5 -->
-                            <div class="skill clearfix">
-                                <h4>JavaScript</h4>
-                                <div class="skill-value">80%</div>
-                            </div>
-                            <div class="skill-container skill-5">
-                                <div class="skill-percentage"></div>
-                            </div>
-                            <!-- End of Skill 5 -->
-
-                            <!-- Skill 6 -->
-                            <div class="skill clearfix">
-                                <h4>SQL</h4>
-                                <div class="skill-value">85%</div>
-                            </div>
-                            <div class="skill-container skill-6">
-                                <div class="skill-percentage"></div>
-                            </div>
-                            <!-- End of Skill 6 -->
-                            <!-- Skill 6 -->
-                            <div class="skill clearfix">
-                                <h4>PL/SQL</h4>
-                                <div class="skill-value">60%</div>
-                            </div>
-                            <div class="skill-container skill-6">
-                                <div class="skill-percentage"></div>
-                            </div>
-                            <!-- End of Skill 6 -->
-
-                            <!-- Skill 7 -->
-                            <div class="skill clearfix">
-                                <h4>HTML/CSS</h4>
-                                <div class="skill-value">100%</div>
-                            </div>
-                            <div class="skill-container skill-7">
-                                <div class="skill-percentage"></div>
-                            </div>
-                            <!-- End of Skill 7 -->
-
-                            <!-- Skill 8 -->
-                            <div class="skill clearfix">
-                                <h4>SASS</h4>
-                                <div class="skill-value">75%</div>
-                            </div>
-                            <div class="skill-container skill-8">
-                                <div class="skill-percentage"></div>
-                            </div>
-                            <!-- End of Skill 8 -->
-
-                            <!-- Skill 9 -->
-                            <div class="skill clearfix">
-                                <h4>Bootstrap</h4>
-                                <div class="skill-value">90%</div>
-                            </div>
-                            <div class="skill-container skill-9">
-                                <div class="skill-percentage"></div>
-                            </div>
-                            <!-- End of Skill 9 -->
-                        </div>
-                        <!-- End of Coding Skills -->
-
-                        <div class="white-space-10"></div>
-
-                        <!-- Knowledges -->
-                        <div class="block-title">
-                            <h3 class="text-white">Knowledge & Traits</h3>
-                        </div>
-
-                        <ul class="knowledges">
-                            <li>Coding</li>
-                            <li>Writing</li>
-                            <li>Digital Design</li>
-                            <li>Research</li>
-                            <li>Time Management</li>
-                            <li>Analytical Thinking</li>
-                            <li>Adaptable</li>
-                            <li>Cloud Computing</li>
-                            <li>Algorithms</li>
-                            <li>Problem-Solving</li>
-                        </ul>
-                        <!-- End of Knowledges -->
-                    </div>
-                    <!-- End of Skills & Certificates -->
-                </div>
-
-                <div class="white-space-50"></div>
-
-                <!-- Certificates -->
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12">
-                        <div class="block-title">
-                            <h3 class="text-white">Certificates</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <!-- Certificate 1 -->
-                    <div class="col-xs-12 col-sm-6">
-                        <div class="certificate-item clearfix cert-around">
-                            <div class="certi-logo">
-                                <img src="{% static 'img/clients/client-1.png' %}" alt="logo">
-                            </div>
-
-                            <div class="certi-content">
-                                <div class="certi-title">
-                                    <h4>Proficiency In IT</h4>
-                                </div>
-                                <div class="certi-id">
-                                    <span>Membership ID: xxxxxxxxxx</span>
-                                </div>
-                                <div class="certi-date">
-                                    <span>19 Dec 2018</span>
-                                </div>
-                                <div class="certi-company">
-                                    <span>Bridge IT</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End of Certificate 1 -->
-
-                    <!-- Certificate 2 -->
-                    <div class="col-xs-12 col-sm-6">
-                        <div class="certificate-item clearfix cert-around">
-                            <div class="certi-logo">
-                                <img src="{% static 'img/clients/client-1.png' %}" alt="logo">
-                            </div>
-
-                            <div class="certi-content">
-                                <div class="certi-title">
-                                    <h4>CEH</h4>
-                                </div>
-                                <div class="certi-id">
-                                    <span>Membership ID: xxxxxxxxxx</span>
-                                </div>
-                                <div class="certi-date">
-                                    <span>Aug 2018</span>
-                                </div>
-                                <div class="certi-company">
-                                    <span>DCS - UG</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End of Certificate 2 -->
-
-                </div>
-                <!-- End of Certificates -->
-            </div>
-        </section>
-        <!-- End of Resume Subpage -->
-
-        <!-- Portfolio Subpage -->
-        <section data-id="portfolio" class="animated-section">
-            <div class="section-content">
-                <div class="page-title">
-                    <h2>Portfolio</h2>
-                    <h4>My Best Works</h4>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12">
-                        <!-- Portfolio Content -->
-                        <div class="portfolio-content">
-
-                            <ul class="grid-filters portfolio-filters">
-                                <li class="active">
-                                    <a class="filter btn btn-sm btn-link" data-filter=".category_all">All</a>
-                                </li>
-                                <li>
-                                    <a class="filter btn btn-sm btn-link" data-filter=".category_detailed">Detailed</a>
-                                </li>
-                                <li>
-                                    <a class="filter btn btn-sm btn-link" data-filter=".category_mockups">Mockups</a>
-                                </li>
-                                <li>
-                                    <a class="filter btn btn-sm btn-link"
-                                        data-filter=".category_soundcloud">SoundCloud</a>
-                                </li>
-                                <li>
-                                    <a class="filter btn btn-sm btn-link" data-filter=".category_vimeo-videos">Vimeo
-                                        Videos</a>
-                                </li>
-                                <li>
-                                    <a class="filter btn btn-sm btn-link" data-filter=".category_youtube-videos">YouTube
-                                        Videos</a>
-                                </li>
-                            </ul>
-
-                            <!-- Portfolio Grid -->
-                            <div class="portfolio-grid two-columns">
-
-                                <figure class="item lbaudio category_all category_soundcloud">
-                                    <div class="portfolio-item-img">
-                                        <img src="{% static 'img/portfolio/1.jpg' %}" alt="SoundCloud Audio" title="" />
-                                        <a href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/221650664&#038;color=%23ff5500&#038;auto_play=false&#038;hide_related=false&#038;show_comments=true&#038;show_user=true&#038;show_reposts=false&#038;show_teaser=true&#038;visual=true"
-                                            class="lightbox mfp-iframe"></a>
-                                    </div>
-
-                                    <i class="fa fa-volume-up"></i>
-                                    <h4 class="name"><span>SoundCloud</span> Audio</h4>
-                                    <span class="category">SoundCloud</span>
-                                </figure>
-
-                                <figure class="item standard category_all category_detailed">
-                                    <div class="portfolio-item-img">
-                                        <img src="{% static 'img/portfolio/2.jpg' %}" alt="Media Project 2" title="" />
-                                        <a href="portfolio-1.html" class="ajax-page-load"></a>
-                                    </div>
-
-                                    <i class="far fa-file-alt"></i>
-                                    <h4 class="name"><span>Detailed</span> Project 2</h4>
-                                    <span class="category">Detailed</span>
-                                </figure>
-
-                                <figure class="item lbvideo category_all category_vimeo-videos">
-                                    <div class="portfolio-item-img">
-                                        <img src="{% static 'img/portfolio/3.jpg' %}" alt="Vimeo Video 1" title="" />
-                                        <a href="https://player.vimeo.com/video/158284739"
-                                            class="lightbox mfp-iframe"></a>
-                                    </div>
-
-                                    <i class="fas fa-video"></i>
-                                    <h4 class="name"><span>Vimeo</span> Video 1</h4>
-                                    <span class="category">Vimeo Videos</span>
-                                </figure>
-
-                                <figure class="item standard category_all category_detailed">
-                                    <div class="portfolio-item-img">
-                                        <img src="{% static 'img/portfolio/4.jpg' %}" alt="Media Project 1" title="" />
-                                        <a href="portfolio-1.html" class="ajax-page-load"></a>
-                                    </div>
-
-                                    <i class="far fa-file-alt"></i>
-                                    <h4 class="name"><span>Detailed</span> Project 1</h4>
-                                    <span class="category">Detailed</span>
-                                </figure>
-
-                                <figure class="item lbimage category_all category_mockups">
-                                    <div class="portfolio-item-img">
-                                        <img src="{% static 'img/portfolio/5.jpg' %}" alt="Mockup Design 1" title="" />
-                                        <a class="lightbox" href="{% static 'img/portfolio/full/5.jpg' %}"></a>
-                                    </div>
-
-                                    <i class="far fa-image"></i>
-                                    <h4 class="name"><span>Mockup</span> Design 1</h4>
-                                    <span class="category">Mockups</span>
-                                </figure>
-
-                                <figure class="item lbvideo category_all category_youtube-videos">
-                                    <div class="portfolio-item-img">
-                                        <img src="{% static 'img/portfolio/6.jpg' %}" alt="YouTube Video 1" title="" />
-                                        <a href="https://www.youtube.com/embed/bg0gv2YpIok"
-                                            class="lightbox mfp-iframe"></a>
-                                    </div>
-
-                                    <i class="fas fa-video"></i>
-                                    <h4 class="name"><span>YouTube</span> Video 1</h4>
-                                    <span class="category">YouTube Videos</span>
-                                </figure>
-                            </div>
-                        </div>
-                        <!-- End of Portfolio Content -->
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End of Portfolio Subpage -->
-
-        <!-- Blog Subpage -->
-        <section data-id="blog" class="animated-section">
-            <div class="section-content">
-                <div class="page-title">
-                    <h2>Blog</h2>
-                    <h4>My Diary</h4>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12">
-                        <ul class="grid-filters blog-filters">
-                            <li class="active">
-                                <a class="filter btn btn-sm btn-link" data-filter=".category_all">All</a>
-                            </li>
-                            <li>
-                                <a class="filter btn btn-sm btn-link" data-filter=".category_ui">UI</a>
-                            </li>
-                            <li>
-                                <a class="filter btn btn-sm btn-link" data-filter=".category_design">Design</a>
-                            </li>
-                            <li>
-                                <a class="filter btn btn-sm btn-link" data-filter=".category_ecommerce">E-Commerce</a>
-                            </li>
-                        </ul>
-
-                        <div class="blog-masonry two-columns clearfix">
-
-                            {% for blog in blogs %}
-                            <!-- Blog Post  -->
-                            <div class="item post-1 category_all category_design">
-                                <div class="blog-card">
-                                    <div class="media-block">
-                                        <div class="category">
-                                            <a href="#" title="View all posts in Design">{{blog.category.name}}</a>
-                                        </div>
-                                        <a href="{% url 'website:blog' %}?blog_id={{blog.id}}">
-                                            <img src="{% if blog.image %} {{blog.image.url}} {% else %} {% static 'img/blog/blog_post_1.jpg' %} {% endif %} "
-                                                class="size-blog-masonry-image-two-c" alt="blog-image" title="" />
-                                            <div class="mask"></div>
-                                        </a>
-                                    </div>
-                                    <div class="post-info">
-                                        <div class="post-date">{{blog.date|date:"M d Y"}}</div>
-                                        <a href="{% url 'website:blog' %}?blog_id={{blog.id}}">
-                                            <h4 class="blog-item-title">{{blog.title}}</h4>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End of Blog Post  -->
-                            {% endfor %}
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-        </section>
-        <!-- End of Blog Subpage -->
-
-        <!-- Contact Subpage -->
-        <section data-id="contact" class="animated-section">
-            <div class="section-content">
-                <div class="page-title">
-                    <h2>Contact</h2>
-                    <h4>Get in Touch</h4>
-                </div>
-
-                <div class="row">
-                    <!-- Contact Info -->
-                    <div class="col-xs-12 col-sm-4">
-                        <div class="lm-info-block gray-default">
-                            <i class="lnr lnr-map-marker"></i>
-                            <h4>Accra Ghana</h4>
-                            <span class="lm-info-block-value"></span>
-                            <span class="lm-info-block-text"></span>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-4">
-                        <div class="lm-info-block gray-default">
-                            <i class="lnr lnr-phone-handset"></i>
-                            <h4>0558 366 133</h4>
-                            <span class="lm-info-block-value"></span>
-                            <span class="lm-info-block-text"></span>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-4">
-                        <div class="lm-info-block gray-default">
-                            <i class="lnr lnr-envelope"></i>
-                            <h4><a href="princesamuelpks@gmail.com">prince@devprincek.me</a>
-                            </h4>
-                            <span class="lm-info-block-value"></span>
-                            <span class="lm-info-block-text"></span>
-                        </div>
-                    </div>
-                    <!-- End of Contact Info -->
-                </div>
-
-                <div class="row">
-                    <!-- Google Map -->
-                    <div class="col-xs-12 col-sm-12">
-                        <div class="white-space-20"></div>
-                        <!-- Google Map -->
-                        <div class="lmpixels-map">
-                            <iframe></iframe>
-                        </div>
-                    </div>
-                    <!-- End of Google Map -->
-                </div>
-
-
-                <div class="row">
-                    <div class=" col-xs-12 col-sm-2">
-                    </div>
-                    <!-- Contact Form -->
-                    <div class="col-xs-12 col-sm-8" style="background-color: white;">
-                        <div class=" white-space-30"></div>
-                        <div class="block-title">
-                            <h3 class="text-white">How Can I Help You?</h3>
-                        </div>
-
-                        <form id="contact_form" class="contact-form" action="" method="post">
-                            <div class="messages"></div>
-                            <div class="controls two-columns">
-                                <div class="fields clearfix">
-                                    <div class="left-column">
-                                        <div class="form-group form-group-with-icon">
-                                            <input id="form_name" type="text" name="name" class="form-control"
-                                                placeholder="Full Name" required="required" data-error="Name is
-                                                required.">
-                                            <label>Full Name</label>
-                                            <div class="form-control-border"></div>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-
-                                        <div class="form-group form-group-with-icon">
-                                            <input id="form_email" type="email" name="email" class="form-control"
-                                                placeholder="Email Address" required="required"
-                                                data-error="Valid email is required.">
-                                            <label>Email Address</label>
-                                            <div class="form-control-border"></div>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-
-                                        <div class="form-group form-group-with-icon">
-                                            <input id="form_subject" type="text" name="subject" class="form-control"
-                                                placeholder="" required="required" data-error="Subject is required.">
-                                            <label>Subject</label>
-                                            <div class="form-control-border"></div>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                    <div class="right-column">
-                                        <div class="form-group form-group-with-icon">
-                                            <textarea id="form_message" name="message" class="form-control"
-                                                placeholder="" rows="7" required="required"
-                                                data-error="Please, leave me a message."></textarea>
-                                            <label>Message</label>
-                                            <div class="form-control-border"></div>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <input type="submit" class="button btn-send" value="Send message">
-                            </div>
-                        </form>
-                    </div>
-                    <!-- End of Contact Form -->
-                </div>
-
-            </div>
-        </section>
-        <!-- End of Contact Subpage -->
+            <!--end row-->
+        </div><!-- end container -->
+    </section>
+    <!-- end hero -->
+    <div class="position-relative">
+        <div class="shape overflow-hidden text-white">
+            <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+            </svg>
+        </div>
     </div>
-</div>
-{% endblock %}
+    <!-- start about -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 align-self-center">
+                    <h5 class="fs-24 text-dark fw-medium">Personal Details</h5>
+                    <h4 class="fw-normal lh-base text-gray-700 mb-4 fs-20">I am an individual looking to work in an
+                        organization where I will use my superpowers (technological abilities) to help improve
+                        productivity, create tools and scripts to make our lives easier.
+                    </h4>
+                    <div class="social">
+                        <a href="https://github.com/DevPrinceK" target="_blank">
+                            <i class="lab la-github github me-1"></i>
+                        </a>
+                        <a href="#" target="_blank">
+                            <i class="lab la-twitter twitter me-1"></i>
+                        </a>
+                        <a href="#" target="_blank">
+                            <i class="lab la-google google me-1"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/prince-samuel-941956165/" target="_blank">
+                            <i class="lab la-linkedin-in linkedin me-1"></i>
+                        </a>
+                    </div>
+                </div>
+                <!--end col-->
+                <div class="col-lg-5 ms-auto align-self-center">
+                    <div class="mb-5 mb-lg-0">
+                        <p class="mb-2">
+                            <span class="personal-detail-title">Date of birth</span>
+                            <span class="personal-detail-info">05 FEB 1997</span>
+                        </p>
+                        <p class="mb-2">
+                            <span class="personal-detail-title">Spoken Langages</span>
+                            <span class="personal-detail-info">English - Akan - Ewe</span>
+                        </p>
+                        <p class="mb-2">
+                            <span class="personal-detail-title">Nationality</span>
+                            <span class="personal-detail-info">Ghanaian</span>
+                        </p>
+                        <p class="mb-2">
+                            <span class="personal-detail-title">Interest</span>
+                            <span class="personal-detail-info">Coding, Reading, Music</span>
+                        </p>
+                    </div>
+                </div>
+                <!--end col-->
+                <div class="col-12 mt-5">
+                    <div class="d-flex flex-wrap justify-content-center mt-4 mt-md-5">
+                        <div class="mx-3 ms-sm-0 ms-sm-0 mb-3 card-bg rounded p-1 pe-3 p-md-3 pe-md-4 shadow-sm">
+                            <div class="d-flex align-items-center">
+                                <div class="thumb-md d-flex flex-wrap justify-content-center align-items-center">
+                                    <img src="{% static 'images/python-5.svg' %}" alt="" class="" height="34">
+                                </div>
+                                <div class="ms-3">
+                                    <h6 class="mb-0 fw-medium text-gray-700">Python</h6>
+                                    <p class="text-muted mb-0 fs-12">2 Year Experience</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/div-->
+                        <div class="mx-3 ms-sm-0 ms-sm-0 mb-3 card-bg rounded p-1 pe-3 p-md-3 pe-md-4 shadow-sm">
+                            <div class="d-flex align-items-center">
+                                <div class="thumb-md d-flex flex-wrap justify-content-center align-items-center">
+                                    <img src="{% static 'images/django.svg' %}" alt="" class="" height="34">
+                                </div>
+                                <div class="ms-3">
+                                    <h6 class="mb-0 fw-medium text-gray-700">Django</h6>
+                                    <p class="text-muted mb-0 fs-12">1 Year Experience</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/div-->
+                        <div class="mx-3 ms-sm-0 ms-sm-0 mb-3 card-bg rounded p-1 pe-3 p-md-3 pe-md-4 shadow-sm">
+                            <div class="d-flex align-items-center">
+                                <div class="thumb-md d-flex flex-wrap justify-content-center align-items-center">
+                                    <img src="{% static 'images/logos/bootstrap.svg' %}" alt="" class="" height="34">
+                                </div>
+                                <div class="ms-3">
+                                    <h6 class="mb-0 fw-medium text-gray-700">Bootstrap</h6>
+                                    <p class="text-muted mb-0 fs-12">1.5 Year Experience</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/div-->
+                        <div class="mx-3 ms-sm-0 ms-sm-0 mb-3 card-bg rounded p-1 pe-3 p-md-3 pe-md-4 shadow-sm">
+                            <div class="d-flex align-items-center">
+                                <div class="thumb-md d-flex flex-wrap justify-content-center align-items-center">
+                                    <img src="{% static 'images/mysql-svgrepo-com.svg' %}" alt="" class="" height="34">
+                                </div>
+                                <div class="ms-3">
+                                    <h6 class="mb-0 fw-medium text-gray-700">SQL</h6>
+                                    <p class="text-muted mb-0 fs-12">1 Year Experience</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/div-->
+                        <div class="mx-3 ms-sm-0 ms-sm-0 mb-3 card-bg rounded p-1 pe-3 p-md-3 pe-md-4 shadow-sm">
+                            <div class="d-flex align-items-center">
+                                <div class="thumb-md d-flex flex-wrap justify-content-center align-items-center">
+                                    <img src="{% static 'images/postgresql-inc.svg' %}" alt="" class="" height="34">
+                                </div>
+                                <div class="ms-3">
+                                    <h6 class="mb-0 fw-medium text-gray-700">Postgresql</h6>
+                                    <p class="text-muted mb-0 fs-12">8 Months Experience</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/div-->
+                        <div class="mx-3 ms-sm-0 ms-sm-0 mb-3 card-bg rounded p-1 pe-3 p-md-3 pe-md-4 shadow-sm">
+                            <div class="d-flex align-items-center">
+                                <div class="thumb-md d-flex flex-wrap justify-content-center align-items-center">
+                                    <img src="{% static 'images/digitalocean-icon-1.svg' %}" alt="" class=""
+                                        height="34">
+                                </div>
+                                <div class="ms-3">
+                                    <h6 class="mb-0 fw-medium text-gray-700">DigitalOCean</h6>
+                                    <p class="text-muted mb-0 fs-12">6 Months Experience</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/div-->
+                        <div class="mx-3 ms-sm-0 ms-sm-0 mb-3 card-bg rounded p-1 pe-3 p-md-3 pe-md-4 shadow-sm">
+                            <div class="d-flex align-items-center">
+                                <div class="thumb-md d-flex flex-wrap justify-content-center align-items-center">
+                                    <img src="{% static 'images/github-icon-1.svg' %}" alt="" class="" height="34">
+                                </div>
+                                <div class="ms-3">
+                                    <h6 class="mb-0 fw-medium text-gray-700">Github</h6>
+                                    <p class="text-muted mb-0 fs-12">2 Year Experience</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/div-->
+                        <div class="mx-3 ms-sm-0 ms-sm-0 mb-3 card-bg rounded p-1 pe-3 p-md-3 pe-md-4 shadow-sm">
+                            <div class="d-flex align-items-center">
+                                <div class="thumb-md d-flex flex-wrap justify-content-center align-items-center">
+                                    <img src="{% static 'images/html-1.svg' %}" alt="" class="" height="34">
+                                </div>
+                                <div class="ms-3">
+                                    <h6 class="mb-0 fw-medium text-gray-700">HTML CSS</h6>
+                                    <p class="text-muted mb-0 fs-12">2 Months Experience</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/div-->
+                        <!--/div-->
+                        <div class="mx-3 ms-sm-0 ms-sm-0 mb-3 card-bg rounded p-1 pe-3 p-md-3 pe-md-4 shadow-sm">
+                            <div class="d-flex align-items-center">
+                                <div class="thumb-md d-flex flex-wrap justify-content-center align-items-center">
+                                    <img src="{% static 'images/logos/nodejs-icon.svg' %}" alt="" class="" height="34">
+                                </div>
+                                <div class="ms-3">
+                                    <h6 class="mb-0 fw-medium text-gray-700">JavaScript</h6>
+                                    <p class="text-muted mb-0 fs-12">1.5 Months Experience</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/div-->
+                        <!--/div-->
+                        <div class="mx-3 ms-sm-0 ms-sm-0 mb-3 card-bg rounded p-1 pe-3 p-md-3 pe-md-4 shadow-sm">
+                            <div class="d-flex align-items-center">
+                                <div class="thumb-md d-flex flex-wrap justify-content-center align-items-center">
+                                    <img src="{% static 'images/apache-13.svg' %}" alt="" class="" height="34">
+                                </div>
+                                <div class="ms-3">
+                                    <h6 class="mb-0 fw-medium text-gray-700">Apache</h6>
+                                    <p class="text-muted mb-0 fs-12">3 Months Experience</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/div-->
+                    </div><!-- End div -->
+                </div><!-- End Col -->
+            </div>
+            <!--end row-->
+        </div><!-- end container -->
+    </section>
+    <!-- end about -->
+    <!-- start services -->
+    {% include 'website/services_block.html' %}
+    <!-- end services -->
+
+
+    <!-- start resume -->
+    <section class="section" id="resume">
+        <div class="container">
+            <div class="row justify-content-center mb-4">
+                <div class="col-12 col-md-10 col-lg-7 text-center">
+                    <span class="badge badge-lg rounded bg-soft-alt-success fw-normal fs-13 text-uppercase">Life
+                        Time</span>
+                    <h2 class="fs-2 fw-medium lh-1 text-dark my-3">Education & Experience</h2>
+                    <p class="text-gray-700 fs-18 fs-lg mb-4 mb-md-5 lh-lg">
+                        The Journey so far.
+                    </p>
+                </div>
+                <!--end col-->
+            </div>
+            <!--end row-->
+            <div class="row">
+                <div class="col-12">
+                    <div class="row g-0">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card rounded bg-light h-100 border-0">
+                                <div class="card-body d-flex justify-content-center align-items-center">
+                                    <div class="mx-auto text-center">
+                                        <img src="{% static 'images/personal/school.png' %}" alt="" class="vector-dark"
+                                            height="150">
+                                        <img src="{% static 'images/personal/school-light.png' %}" alt=""
+                                            class="vector-light" height="150">
+                                        <h5 class="text-dark fs-22 fw-medium my-2">Education</h5>
+                                    </div>
+                                </div><!-- end card-body -->
+                            </div><!-- end card -->
+                        </div><!-- end col -->
+                        <div class="col-lg-8 col-md-6">
+                            <div class="card rounded bg-white h-100 border-0">
+                                <div class="card-body p-0">
+                                    <div class="accordion accordion-flush" id="Education_accordion">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="prime">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#Education_one" aria-expanded="false">
+                                                    Bsc. Computer Science
+                                                    <span class="fw-medium text-primary ms-auto fs-14">2019 -
+                                                        Date</span>
+                                                </button>
+                                            </h2>
+                                            <div id="Education_one" class="accordion-collapse collapse show"
+                                                aria-labelledby="prime" data-bs-parent="#Education_accordion">
+                                                <div class="accordion-body">
+                                                    <p class="text-muted mb-3">Currently reading Computer Science in the
+                                                        University of Ghana. Level 300.
+                                                    </p>
+                                                    <p class="fw-medium">University of Ghana, Legon.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--end accordion-item-->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="second">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#Education_two"
+                                                    aria-expanded="false">
+                                                    Proficiency in IT Skills
+                                                    <span class="fw-medium text-primary ms-auto fs-14">2018 -
+                                                        2018</span>
+                                                </button>
+                                            </h2>
+                                            <div id="Education_two" class="accordion-collapse collapse"
+                                                aria-labelledby="second" data-bs-parent="#Education_accordion">
+                                                <div class="accordion-body">
+                                                    <p class="text-muted mb-3">Took a three month course in IT.
+                                                    </p>
+                                                    <p class="fw-medium">Bridge IT, Ghana</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--end accordion-item-->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="higher">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#Education_three"
+                                                    aria-expanded="false">
+                                                    Senior High School
+                                                    <span class="fw-medium text-primary ms-auto fs-14">2015 -
+                                                        2018</span>
+                                                </button>
+                                            </h2>
+                                            <div id="Education_three" class="accordion-collapse collapse"
+                                                aria-labelledby="higher" data-bs-parent="#Education_accordion">
+                                                <div class="accordion-body">
+                                                    <p class="text-muted mb-3">Did my high school course at Tashtech,
+                                                        where I read general arts with the options: Elective
+                                                        Mathematics, Economics, Geography, Government.
+                                                    </p>
+                                                    <p class="fw-medium">Tapaman Senior High Technical School, Oti -
+                                                        Ghana</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--end accordion-item-->
+                                    </div>
+                                    <!--end accordion-->
+                                </div><!-- end card-body -->
+                            </div><!-- end card -->
+                        </div><!-- end col -->
+                    </div><!-- end row -->
+                    <hr class="hr-dashed">
+                    <div class="row g-0">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card rounded bg-light h-100 border-0">
+                                <div class="card-body d-flex justify-content-center align-items-center">
+                                    <div class="mx-auto text-center">
+                                        <img src="{% static 'images/personal/job.png' %}" alt="" class="vector-dark"
+                                            height="150">
+                                        <img src="{% static 'images/personal/job-light.png' %}" alt=""
+                                            class="vector-light" height="150">
+                                        <h5 class="text-dark fs-22 fw-medium my-2">Experience</h5>
+                                    </div>
+                                </div><!-- end card-body -->
+                            </div><!-- end card -->
+                        </div><!-- end col -->
+                        <div class="col-lg-8 col-md-6">
+                            <div class="card rounded bg-white h-100 border-0">
+                                <div class="card-body p-0">
+                                    <div class="accordion accordion-flush" id="Experience_accordion">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="first-co">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#Experience_one" aria-expanded="false">
+                                                    Mini Project - Team Lead
+                                                    <span class="fw-medium text-primary ms-auto fs-14">2022 -
+                                                        2022</span>
+                                                </button>
+                                            </h2>
+                                            <div id="Experience_one" class="accordion-collapse collapse show"
+                                                aria-labelledby="first-co" data-bs-parent="#Experience_accordion">
+                                                <div class="accordion-body">
+                                                    <p class="text-muted mb-1">- Lead a team of 10 to design, develop
+                                                        and deploy 'render' and platform where unskilled labour can find
+                                                        jobs suited for them.</p>
+                                                    <p class="fw-medium">Computer Science Department, University of
+                                                        Ghana.</p>
+                                                    <span
+                                                        class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Django</span>
+                                                    <span
+                                                        class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">React
+                                                        Native</span>
+                                                    <span
+                                                        class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Python</span>
+                                                    <span
+                                                        class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Django
+                                                        RestFrameWork</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--end accordion-item-->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="second-co">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#Experience_two"
+                                                    aria-expanded="false">
+                                                    Freelance Developer
+                                                    <span class="fw-medium text-primary ms-auto fs-14">2022 -
+                                                        2022</span>
+                                                </button>
+                                            </h2>
+                                            <div id="Experience_two" class="accordion-collapse collapse"
+                                                aria-labelledby="second-co" data-bs-parent="#Experience_accordion">
+                                                <div class="accordion-body">
+                                                    <p class="text-muted mb-1">- Was part of a 3-member group that
+                                                        designed, developed and deployed a multi-vendor ecommerce
+                                                        platform for Techstuff.</p>
+                                                    <p class="fw-medium">TechstuffGH, Circle Accra-Ghana</p>
+                                                    <span
+                                                        class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Django</span>
+                                                    <span
+                                                        class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Bootstrap</span>
+                                                    <span
+                                                        class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">javascript</span>
+                                                    <span
+                                                        class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">ChartJS</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--end accordion-item-->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="third-co">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#Experience_three"
+                                                    aria-expanded="false">
+                                                    Freelance Developer
+                                                    <span class="fw-medium text-primary ms-auto fs-14">2022 -
+                                                        2022</span>
+                                                </button>
+                                            </h2>
+                                            <div id="Experience_three" class="accordion-collapse collapse"
+                                                aria-labelledby="third-co" data-bs-parent="#Experience_accordion">
+                                                <div class="accordion-body">
+                                                    <p class="text-muted mb-1">- Was the sole developer who designed,
+                                                        developed and deployed a product advertisement platform for
+                                                        Jamilahome Limited.</p>
+                                                    <p class="fw-medium">Jamilahome Limited, Accra - Ghana</p>
+                                                    <span
+                                                        class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Python</span>
+                                                    <span
+                                                        class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">ChartJS</span>
+                                                    <span
+                                                        class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Django</span>
+                                                    <span
+                                                        class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Bootstrap</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--end accordion-item-->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="third-co">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#Experience_four"
+                                                    aria-expanded="false">
+                                                    Freelance Developer
+                                                    <span class="fw-medium text-primary ms-auto fs-14">2022 -
+                                                        2022</span>
+                                                </button>
+                                            </h2>
+                                            <div id="Experience_four" class="accordion-collapse collapse"
+                                                aria-labelledby="third-co" data-bs-parent="#Experience_accordion">
+                                                <div class="accordion-body">
+                                                    <p class="text-muted mb-1">- Designed, developed and deployed an
+                                                        electronic voting platform for Tashtech, an SHS based in Ghana -
+                                                        Oti Region.</p>
+                                                    <p class="fw-medium">Tapaman Senior High School, Oti - Ghana</p>
+                                                    <span
+                                                        class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Python</span>
+                                                    <span
+                                                        class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">ChartJS</span>
+                                                    <span
+                                                        class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Django</span>
+                                                    <span
+                                                        class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Bootstrap</span>
+                                                    <span
+                                                        class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Javascript</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--end accordion-item-->
+                                        <!--end accordion-item-->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="third-co">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#Experience_five"
+                                                    aria-expanded="false">
+                                                    Software Developer
+                                                    <span class="fw-medium text-primary ms-auto fs-14">2021 -
+                                                        Date</span>
+                                                </button>
+                                            </h2>
+                                            <div id="Experience_five" class="accordion-collapse collapse"
+                                                aria-labelledby="third-co" data-bs-parent="#Experience_accordion">
+                                                <div class="accordion-body">
+                                                    <p class="text-muted mb-1">- Joined PayHub Ghana Limited, a fintech
+                                                        company as a software developer.</p>
+                                                    <p class="fw-medium">PayHub Ghana Limited, Accra - Ghana</p>
+                                                    <span
+                                                        class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Django</span>
+                                                    <span
+                                                        class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">RestAPI</span>
+                                                    <span
+                                                        class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">DRF</span>
+                                                    <span
+                                                        class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Postgresql</span>
+                                                    <span
+                                                        class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">DigitalOcean</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--end accordion-item-->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="third-co">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#Experience_six"
+                                                    aria-expanded="false">
+                                                    IT Instructor
+                                                    <span class="fw-medium text-primary ms-auto fs-14">2020 -
+                                                        2021</span>
+                                                </button>
+                                            </h2>
+                                            <div id="Experience_six" class="accordion-collapse collapse"
+                                                aria-labelledby="third-co" data-bs-parent="#Experience_accordion">
+                                                <div class="accordion-body">
+                                                    <p class="text-muted mb-1">- Served as an IT instructor for Bridge
+                                                        IT in the Oti Region. Introduced students to basic computing
+                                                        concepts..</p>
+                                                    <p class="fw-medium">Bridge IT, Oti - Ghana</p>
+                                                    <span
+                                                        class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">MS
+                                                        Word</span>
+                                                    <span
+                                                        class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">MS
+                                                        Paint</span>
+                                                    <span
+                                                        class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Intro
+                                                        to Computing</span>
+                                                    <span
+                                                        class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Keyboard
+                                                        skills</span>
+                                                    <span
+                                                        class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Mouse
+                                                        Handling</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--end accordion-item-->
+                                    </div>
+                                    <!--end accordion-->
+                                </div><!-- end card-body -->
+                            </div><!-- end card -->
+                        </div><!-- end col -->
+                    </div>
+                    <!--end row-->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </section>
+    <!-- end resume -->
+
+    <div class="position-relative">
+        <div class="shape overflow-hidden text-light">
+            <svg viewBox="0 0 2880 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M110 105L2160 0H2880V150H0V105H110Z" fill="currentColor"></path>
+            </svg>
+        </div>
+    </div>
+    <!--what client says -->
+    <section class="section bg-gradient-light-white" id="review">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 mx-auto">
+                    <div class="card rounded shadow">
+                        <div class="client-carousel">
+                            <div class="row align-items-center">
+                                <div class="col-lg-10 p-5 mx-auto">
+                                    <div class="client-carousel">
+                                        <div id="demo" class="carousel carousel-dark slide" data-bs-ride="carousel"
+                                            data-bs-wrap="true">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item text-center active" data-bs-interval="4000">
+                                                    <img src="{% static 'images/logos/logo-1.svg' %}" alt=""
+                                                        class="my-3" height="70">
+                                                    <p class="font-secondary fs-22 fst-italic mb-4 px-4">
+                                                        I feel confident imposing change on myself.
+                                                        It's a lot more fun progressing than looking back.
+                                                        That's why scelerisque pretium dolor,
+                                                        sit amet vehicula erat pelleque need throw curve balls.
+                                                    </p>
+                                                    <img src="{% static 'images/users/user-3.jpg' %}" alt=""
+                                                        class="thumb-lg rounded-circle d-block mx-auto">
+                                                    <span class="text-uppercase text-muted fs-14 fw-medium">- John M.
+                                                        Sperry</span>
+                                                    <ul class="list-inline mb-0 align-self-center">
+                                                        <li class="list-inline-item"><i
+                                                                class="la la-star text-warning fs-16"></i></li>
+                                                        <li class="list-inline-item"><i
+                                                                class="la la-star text-warning fs-16 ms-n2"></i></li>
+                                                        <li class="list-inline-item"><i
+                                                                class="la la-star text-warning fs-16 ms-n2"></i></li>
+                                                        <li class="list-inline-item"><i
+                                                                class="la la-star text-warning fs-16 ms-n2"></i></li>
+                                                        <li class="list-inline-item"><i
+                                                                class="la la-star-half-o text-warning fs-16 ms-n2"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="carousel-item text-center" data-bs-interval="4000">
+                                                    <img src="{% static 'images/logos/logo-3.svg' %}" alt=""
+                                                        class="my-3" height="70">
+                                                    <p class="font-secondary fs-22 fst-italic mb-4 px-4">
+                                                        I feel confident imposing change on myself.
+                                                        It's a lot more fun progressing than looking back.
+                                                        That's why scelerisque pretium dolor,
+                                                        sit amet vehicula erat pelleque need throw curve balls.
+                                                    </p>
+                                                    <img src="{% static 'images/users/user-5.jpg' %}" alt=""
+                                                        class="thumb-lg rounded-circle d-block mx-auto">
+                                                    <span class="text-uppercase text-muted fs-14 fw-medium">- Larry J.
+                                                        Akins</span>
+                                                    <ul class="list-inline mb-0 align-self-center">
+                                                        <li class="list-inline-item"><i
+                                                                class="la la-star text-warning fs-16"></i></li>
+                                                        <li class="list-inline-item"><i
+                                                                class="la la-star text-warning fs-16 ms-n2"></i></li>
+                                                        <li class="list-inline-item"><i
+                                                                class="la la-star text-warning fs-16 ms-n2"></i></li>
+                                                        <li class="list-inline-item"><i
+                                                                class="la la-star text-warning fs-16 ms-n2"></i></li>
+                                                        <li class="list-inline-item"><i
+                                                                class="la la-star-half-o text-warning fs-16 ms-n2"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#demo"
+                                            data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon"></span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#demo"
+                                            data-bs-slide="next">
+                                            <span class="carousel-control-next-icon"></span>
+                                        </button>
+                                    </div>
+                                    <!--end client-carousel-->
+                                </div>
+                                <!--end col-->
+                            </div><!-- end row -->
+                        </div>
+                        <!--end card-body-->
+                    </div>
+                    <!--end card-->
+                </div>
+                <!--end col-->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </section>
+    <!-- end what client says -->
+
+    {% include 'website/get_in_touch.html' %}
+    {% include 'website/projects_block.html' %}
+
+    <!-- end projects -->
+
+    <!-- our blogs -->
+    <section class="section" id="blogs">
+        <div class="container pb-5">
+            <div class="row justify-content-center mb-4">
+                <div class="col-12 col-md-10 col-lg-7 text-center">
+                    <span class="badge badge-lg rounded bg-soft-alt-success fw-normal fs-13 text-uppercase">Blogs</span>
+                    <h2 class="fs-2 fw-normal lh-1 text-dark my-3">Tech Insights</h2>
+                    <p class="text-gray-700 fs-18 fs-lg mb-4 mb-md-5 lh-lg">
+                        I write on latest technologies and how to implement certain features in programming accross
+                        several languages.
+                    </p>
+                </div>
+                <!--end col-->
+            </div>
+            <!--end row-->
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card shadow">
+                        <img src="{% static 'images/personal/1.jpg' %}" alt="" class="img-fluid rounded-top">
+                        <div class="card-body">
+
+                            <a href="" class="fs-20 my-0 d-block fw-medium">How to deploy Django app on Heroku</a>
+                            <hr class="hr-dashed">
+                            <div class="d-flex justify-content-between">
+                                <div class="meta-box">
+                                    <div class="media">
+                                        <img src="{% static 'images/users/user-7.jpg' %}" alt=""
+                                            class="thumb-sm rounded-circle me-2 align-self-center">
+                                        <div class="media-body align-self-center text-truncate">
+                                            <h6 class="m-0 fs-14">devprincek</h6>
+                                            <p class="mb-0 fs-12 text-muted">14 Feb 2022</p>
+                                        </div>
+                                        <!--end media-body-->
+                                    </div>
+                                </div>
+                                <!--end meta-box-->
+                                <div class="align-self-center">
+                                    <a href="#" class="fs-14">Read more <i
+                                            class="ti ti-arrow-right align-self-center"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end card-body-->
+                    </div>
+                    <!--end card-->
+                </div>
+                <!--end col-->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card shadow">
+                        <img src="{% static 'images/personal/3.jpg' %}" alt="" class="img-fluid rounded-top">
+                        <div class="card-body">
+                            <a href="" class="fs-20 my-0 d-block fw-medium">A glance at DigitalOcean droplet</a>
+                            <hr class="hr-dashed">
+                            <div class="d-flex justify-content-between">
+                                <div class="meta-box">
+                                    <div class="media">
+                                        <img src="{% static 'images/users/user-2.jpg' %}" alt=""
+                                            class="thumb-sm rounded-circle me-2 align-self-center">
+                                        <div class="media-body align-self-center text-truncate">
+                                            <h6 class="m-0 fs-14">devprincek</h6>
+                                            <p class="mb-0 fs-12 text-muted">12 Jan 2022</p>
+                                        </div>
+                                        <!--end media-body-->
+                                    </div>
+                                </div>
+                                <!--end meta-box-->
+                                <div class="align-self-center">
+                                    <a href="#" class="fs-14">Read more <i
+                                            class="ti ti-arrow-right align-self-center"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end card-body-->
+                    </div>
+                    <!--end card-->
+                </div>
+                <!--end col-->
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card shadow">
+                        <img src="{% static 'images/personal/2.jpg' %}" alt="" class="img-fluid rounded-top">
+                        <div class="card-body">
+                            <a href="" class="fs-20 my-0 d-block fw-medium">Deploy Django on DigitalOCean Droplet</a>
+                            <hr class="hr-dashed">
+                            <div class="d-flex justify-content-between">
+                                <div class="meta-box">
+                                    <div class="media">
+                                        <img src="{% static 'images/users/user-2.jpg' %}" alt=""
+                                            class="thumb-sm rounded-circle me-2 align-self-center">
+                                        <div class="media-body align-self-center text-truncate">
+                                            <h6 class="m-0 fs-14">devprincek</h6>
+                                            <p class="mb-0 fs-12 text-muted">12 Jan 2022</p>
+                                        </div>
+                                        <!--end media-body-->
+                                    </div>
+                                </div>
+                                <!--end meta-box-->
+                                <div class="align-self-center">
+                                    <a href="#" class="fs-14">Read more <i
+                                            class="ti ti-arrow-right align-self-center"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end card-body-->
+                    </div>
+                    <!--end card-->
+                </div>
+                <!--end col-->
+            </div><!-- end row -->
+        </div>
+        <!-- end container -->
+    </section>
+    <!--end projects-->
+
+    <!-- start contact us -->
+    {% include 'website/contact_form.html' %}
+    <!-- end contact us -->
+
+
+    <div class="position-relative">
+        <div class="shape overflow-hidden bg-footer">
+            <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+            </svg>
+        </div>
+    </div>
+
+    <!-- start footer -->
+    {% include "website/footer.html" %}
+    <!-- end footer -->
+
+    <!-- Style switcher -->
+    <div id="style-switcher" onclick="toggleSwitcher()">
+        <div>
+            <h3 class="fw-medium mb-0">Select Your Choice</h3>
+            <hr class="hr-dashed my-3">
+            <ul class="pattern">
+                <li>
+                    <a class="color1" href="javascript: void(0);" onclick="setColor('default')"></a>
+                </li>
+                <li>
+                    <a class="color2" href="javascript: void(0);" onclick="setColor('info')"></a>
+                </li>
+                <li>
+                    <a class="color3" href="javascript: void(0);" onclick="setColor('warning')"></a>
+                </li>
+                <li>
+                    <a class="color4" href="javascript: void(0);" onclick="setColor('orange')"></a>
+                </li>
+                <li>
+                    <a class="color5" href="javascript: void(0);" onclick="setColor('purple')"></a>
+                </li>
+                <li>
+                    <a class="color6" href="javascript: void(0);" onclick="setColor('success')"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="bottom">
+            <a href="javascript: void(0);" class="settings rounded-end"><i class="las la-paint-brush fs-22"></i></a>
+        </div>
+    </div>
+    <!-- end Style switcher -->
+
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- feather icon -->
+    <script src="{% static 'js/feather.js' %}"></script>
+    <script src="{% static 'js/shuffle.min.js' %}"></script>
+    <script src="{% static 'js/projects.init.js' %}"></script>
+    <script src="{% static 'js/text-roted.js' %}"></script>
+    <script src="{% static 'js/video.init.js' %}"></script>
+
+    <script src="{% static 'js/app.js' %}"></script>
+
+</body>
+
+</html>

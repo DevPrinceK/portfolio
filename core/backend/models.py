@@ -47,6 +47,18 @@ class Tag(models.Model):
         return self.name
 
 
+class Contact(models.Model):
+    'Model for storing user contacts'
+    name = models.CharField(max_length=200)
+    email = models.EmailField(max_length=200, blank=True, null=True)
+    subject = models.CharField(max_length=200)
+    contact = models.CharField(max_length=200, blank=True, null=True)
+    message = models.TextField()
+
+    def __str__(self):
+        return self.subject
+
+
 # clients  - name, image
 class Client(models.Model):
     '''Model for clients'''
