@@ -9,7 +9,11 @@ class IndexView(View):
     template = 'website/index.html'
 
     def get(self, request, *args, **kwargs):
-        return render(request, self.template, {})
+        blogs = Blog.objects.all().order_by(
+            '-id')[:3] if Blog.objects.all() else {}
+        context = {'blogs': blogs}
+
+        return render(request, self.template, context)
 
 
 class AboutView(View):
