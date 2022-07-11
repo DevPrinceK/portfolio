@@ -22,7 +22,8 @@
                         <h1>Blogs Management</h1>
                     </div>
                     <div class="col-1">
-                        <a href="" class=" btn btn-sm btn-primary text-rigt">+ New</a> <br>
+                        <a href="{% url 'backend:create_update_blog' %}" class=" btn btn-sm btn-primary text-rigt">+
+                            New</a> <br>
                     </div>
                 </div>
             </div>
@@ -30,10 +31,15 @@
             <div class="col-12 card blog-item">
                 <div class="card-body">
                     <div class="row">
-                        <h2 class="col-10"> <a href="">{{blog.title}}.</a></h2>
+                        <h2 class="col-10"> <a href="">{{blog.title}}</a></h2>
                         <div class="container col-2 text-right">
                             <a href="" class="btn btn-sm btn-primary">Edit</a>
-                            <a href="" class="btn btn-sm btn-danger">Delete</a>
+                            <form action="{% url 'backend:delete_blog' %}" method="POST" style="display: inline;">
+                                {% csrf_token %}
+                                <input type="hidden" name="blog_id" value="{{blog.id}}">
+                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                            </form>
+                            <!-- <a href="" class="btn btn-sm btn-danger">Delete</a> -->
                         </div>
                     </div>
                 </div>
