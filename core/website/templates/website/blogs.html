@@ -10,28 +10,30 @@
 <section class="section">
     <div class="container">
         <div class="row align-items-center">
+            {% for blog in blogs %}
             <div class="col-lg-4 col-md-6">
                 <div class="card shadow  mb-4 mb-4">
-                    <img src="{% static 'images/personal/1.jpg' %}" alt="" class="img-fluid rounded-top">
+                    <img src="{% if blog.image %} {{blog.image.url}} {% else %} {% static 'images/personal/1.jpg' %} {% endif %} "
+                        alt="blog image" class="img-fluid rounded-top">
                     <div class="card-body">
-                        <a href="" class="fs-20 my-0 d-block fw-medium">Change the world with small
-                            things</a>
+                        <a href="{% url 'website:blog_detail' blog.id %}"
+                            class="fs-20 my-0 d-block fw-medium">{{blog.title}}</a>
                         <hr class="hr-dashed">
                         <div class="d-flex justify-content-between">
                             <div class="meta-box">
                                 <div class="media">
-                                    <img src="{% static 'images/users/user-7.jpg' %}" alt=""
+                                    <img src="{% static 'images/users/user-7.jpg' %}" alt="author image"
                                         class="thumb-sm rounded-circle me-2 align-self-center">
                                     <div class="media-body align-self-center text-truncate">
-                                        <h6 class="m-0 fs-14">Charles Woodall</h6>
-                                        <p class="mb-0 fs-12 text-muted">14 Feb 2022</p>
+                                        <h6 class="m-0 fs-14">{{blog.get_author_name}}</h6>
+                                        <p class="mb-0 fs-12 text-muted">{{blog.date|date:"d m Y"}}</p>
                                     </div>
                                     <!--end media-body-->
                                 </div>
                             </div>
                             <!--end meta-box-->
                             <div class="align-self-center">
-                                <a href="" class="fs-14">Read more <i
+                                <a href="{% url 'website:blog_detail' blog.id %}" class="fs-14">Read more <i
                                         class="ti ti-arrow-right align-self-center"></i></a>
                             </div>
                         </div>
@@ -40,168 +42,7 @@
                 </div>
                 <!--end card-->
             </div>
-            <!--end col-->
-            <div class="col-lg-4 col-md-6">
-                <div class="card shadow  mb-4">
-                    <img src="{% static 'images/personal/3.jpg' %}" alt="" class="img-fluid rounded-top">
-                    <div class="card-body">
-                        <a href="" class="fs-20 my-0 d-block fw-medium">With a clean, minimal and
-                            professional look</a>
-                        <hr class="hr-dashed">
-                        <div class="d-flex justify-content-between">
-                            <div class="meta-box">
-                                <div class="media">
-                                    <img src="{% static 'images/users/user-2.jpg' %}" alt=""
-                                        class="thumb-sm rounded-circle me-2 align-self-center">
-                                    <div class="media-body align-self-center text-truncate">
-                                        <h6 class="m-0 fs-14">Jarvis Owen</h6>
-                                        <p class="mb-0 fs-12 text-muted">12 Jan 2022</p>
-                                    </div>
-                                    <!--end media-body-->
-                                </div>
-                            </div>
-                            <!--end meta-box-->
-                            <div class="align-self-center">
-                                <a href="" class="fs-14">Read more <i
-                                        class="ti ti-arrow-right align-self-center"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end card-body-->
-                </div>
-                <!--end card-->
-            </div>
-            <!--end col-->
-
-            <div class="col-lg-4 col-md-6">
-                <div class="card shadow  mb-4">
-                    <img src="{% static 'images/personal/2.jpg' %}" alt="" class="img-fluid rounded-top">
-                    <div class="card-body">
-                        <a href="" class="fs-20 my-0 d-block fw-medium">With a clean, minimal and
-                            professional look</a>
-                        <hr class="hr-dashed">
-                        <div class="d-flex justify-content-between">
-                            <div class="meta-box">
-                                <div class="media">
-                                    <img src="{% static 'images/users/user-2.jpg' %}" alt=""
-                                        class="thumb-sm rounded-circle me-2 align-self-center">
-                                    <div class="media-body align-self-center text-truncate">
-                                        <h6 class="m-0 fs-14">Jarvis Owen</h6>
-                                        <p class="mb-0 fs-12 text-muted">12 Jan 2022</p>
-                                    </div>
-                                    <!--end media-body-->
-                                </div>
-                            </div>
-                            <!--end meta-box-->
-                            <div class="align-self-center">
-                                <a href="" class="fs-14">Read more <i
-                                        class="ti ti-arrow-right align-self-center"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end card-body-->
-                </div>
-                <!--end card-->
-            </div>
-            <!--end col-->
-        </div>
-        <!-- end row -->
-        <div class="row align-items-center">
-            <div class="col-lg-4 col-md-6">
-                <div class="card shadow  mb-4">
-                    <img src="{% static 'images/personal/4.jpg' %}" alt="" class="img-fluid rounded-top">
-                    <div class="card-body">
-
-                        <a href="" class="fs-20 my-0 d-block fw-medium">Change the world with small
-                            things</a>
-                        <hr class="hr-dashed">
-                        <div class="d-flex justify-content-between">
-                            <div class="meta-box">
-                                <div class="media">
-                                    <img src="{% static 'images/users/user-7.jpg' %}" alt=""
-                                        class="thumb-sm rounded-circle me-2 align-self-center">
-                                    <div class="media-body align-self-center text-truncate">
-                                        <h6 class="m-0 fs-14">Charles Woodall</h6>
-                                        <p class="mb-0 fs-12 text-muted">14 Feb 2022</p>
-                                    </div>
-                                    <!--end media-body-->
-                                </div>
-                            </div>
-                            <!--end meta-box-->
-                            <div class="align-self-center">
-                                <a href="" class="fs-14">Read more <i
-                                        class="ti ti-arrow-right align-self-center"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end card-body-->
-                </div>
-                <!--end card-->
-            </div>
-            <!--end col-->
-            <div class="col-lg-4 col-md-6">
-                <div class="card shadow  mb-4">
-                    <img src="{% static 'images/personal/5.jpg' %}" alt="" class="img-fluid rounded-top">
-                    <div class="card-body">
-                        <a href="" class="fs-20 my-0 d-block fw-medium">With a clean, minimal and
-                            professional look</a>
-                        <hr class="hr-dashed">
-                        <div class="d-flex justify-content-between">
-                            <div class="meta-box">
-                                <div class="media">
-                                    <img src="{% static 'images/users/user-2.jpg' %}" alt=""
-                                        class="thumb-sm rounded-circle me-2 align-self-center">
-                                    <div class="media-body align-self-center text-truncate">
-                                        <h6 class="m-0 fs-14">Jarvis Owen</h6>
-                                        <p class="mb-0 fs-12 text-muted">12 Jan 2022</p>
-                                    </div>
-                                    <!--end media-body-->
-                                </div>
-                            </div>
-                            <!--end meta-box-->
-                            <div class="align-self-center">
-                                <a href="" class="fs-14">Read more <i
-                                        class="ti ti-arrow-right align-self-center"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end card-body-->
-                </div>
-                <!--end card-->
-            </div>
-            <!--end col-->
-
-            <div class="col-lg-4 col-md-6">
-                <div class="card shadow  mb-4">
-                    <img src="{% static 'images/personal/6.jpg' %}" alt="" class="img-fluid rounded-top">
-                    <div class="card-body">
-                        <a href="" class="fs-20 my-0 d-block fw-medium">With a clean, minimal and
-                            professional look</a>
-                        <hr class="hr-dashed">
-                        <div class="d-flex justify-content-between">
-                            <div class="meta-box">
-                                <div class="media">
-                                    <img src="{% static 'images/users/user-2.jpg' %}" alt=""
-                                        class="thumb-sm rounded-circle me-2 align-self-center">
-                                    <div class="media-body align-self-center text-truncate">
-                                        <h6 class="m-0 fs-14">Jarvis Owen</h6>
-                                        <p class="mb-0 fs-12 text-muted">12 Jan 2022</p>
-                                    </div>
-                                    <!--end media-body-->
-                                </div>
-                            </div>
-                            <!--end meta-box-->
-                            <div class="align-self-center">
-                                <a href="" class="fs-14">Read more <i
-                                        class="ti ti-arrow-right align-self-center"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end card-body-->
-                </div>
-                <!--end card-->
-            </div>
-            <!--end col-->
+            {% endfor %}
         </div>
         <!-- end row -->
     </div>
