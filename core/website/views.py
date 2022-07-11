@@ -23,14 +23,18 @@ class BlogsView(View):
     template = 'website/blogs.html'
 
     def get(self, request, *args, **kwargs):
-        return render(request, self.template, {})
+        blogs = Blog.objects.all().order_by('-id')
+        return render(request, self.template, {'blogs': blogs})
 
 
 class BlogDetailView(View):
     template = 'website/blog_details.html'
 
-    def get(self, request, *args, **kwargs):
-        return render(request, self.template, {})
+    def get(self, request, blog_id, *args, **kwargs):
+        blog = Blog.objects.filter(id=blog_id).first()
+        related_blogs = Blog.objects.filter(
+            category=blog.category).order_by('-id')
+        return render(request, self.template, {'blog': blog, 'related_blogs': related_blogs})
 
 
 class ContactView(View):
