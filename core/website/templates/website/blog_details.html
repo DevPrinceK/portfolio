@@ -14,83 +14,36 @@
                 <div class="card border-0 shadow-none">
                     <div class="card-body">
                         <div class="mb-5 text-center">
-                            <p class="text-muted fw-semibold fs-18">26 march 2022</p>
-                            <h3 class="my-3 fs-28 d-block fw-medium text-dark">Best NFT wallets for storing and trading
-                                NFTs</h3>
-                            <p class="text-muted fw-semibold fs-16">Contrary to popular belief, Lorem Ipsum is not
-                                simply random text.</p>
-                            <span class="badge px-3 py-2 bg-light text-dark fw-semibold mt-3 fs-13">Minting</span>
-                            <span class="badge px-3 py-2 bg-light text-dark fw-semibold mt-3 fs-13">NFTs</span>
-                            <span class="badge px-3 py-2 bg-light text-dark fw-semibold mt-3 fs-13">Art</span>
-                            <span class="badge px-3 py-2 bg-light text-dark fw-semibold mt-3 fs-13">Music</span>
+                            <p class="text-muted fw-semibold fs-18">{{blog.date|date:"d M Y"}}</p>
+                            <h3 class="my-3 fs-28 d-block fw-medium text-dark">{{blog.title}}</h3>
+                            <p class="text-muted fw-semibold fs-16">{{blog.subtitle}}</p>
+                            {% for tag in tags %}
+                            <span class="badge px-3 py-2 bg-light text-dark fw-semibold mt-3 fs-13">tag</span>
+                            {% endfor %}
                         </div>
-                        <img src="{% static 'images/personal/1.jpg' %}" alt=""
-                            class="img-fluid rounded d-flex mx-auto" />
+                        <img src="{% if blog.image %} {{blog.image.url}} {% else %} {% static 'images/personal/1.jpg' %} {% endif %} "
+                            alt="Blog Image" class="img-fluid rounded d-flex mx-auto" />
+
                         <div class="my-5">
-                            <p class="text-muted fs-16 mb-4">
-                                It is a long established fact that a reader will be distracted by the readable content
-                                of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
-                                more-or-less normal distribution of letters, as opposed to using 'Content here,
-                                content here', making it look like readable English. It is a long established fact that
-                                a reader will be distracted by the readable content of a page when looking at its
-                                layout. The point of using Lorem Ipsum is that
-                                it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
-                                content here', making it look like readable English.
-                            </p>
-                            <figure>
-                                <blockquote class="blockquote">
-                                    <p><i>There are many variations of passages of Lorem Ipsum available, but the
-                                            majority have suffered alteration
-                                            in some form. </i></p>
-                                </blockquote>
-                                <figcaption class="blockquote-footer">
-                                    Someone famous in <cite title="Source Title">Source Title</cite>
-                                </figcaption>
-                            </figure>
-                            <p class="text-muted fs-16">
-                                It uses a dictionary of over 200 Latin words, combined with a handful of model sentence
-                                structures, to generate Lorem Ipsum which looks reasonable.
-                            </p>
+                            {{blog.content|safe}}
                         </div>
                         <div class="mb-5">
-                            <h3 class="mt-3 fs-24 d-block fw-medium text-dark">Latest Blog Posts</h3>
+                            <h3 class="mt-3 fs-24 d-block fw-medium text-dark">Related Blog Posts</h3>
                             <p class="text-muted fw-semibold fs-14">26 march 2022</p>
                             <div class="row">
                                 <div class="col-12">
                                     <div
                                         class="row row-cols-xl-4 row-cols-lg-4 row-cols-md-2 g-3 justify-content-center">
+                                        {% for item in related_blogs %}
                                         <div class="col">
-                                            <a href="#" class="d-block bg-card shadow p-2 rounded catagories-box">
-                                                <img src="{% static 'images/personal/6.jpg' %}" alt=""
-                                                    class="img-fluid rounded mb-2">
-                                                <h3 class="fs-15 m-0 fw-medium">It is a long established...</h3>
+                                            <a href="{% url 'website:blog_detail' blog.id %}"
+                                                class="d-block bg-card shadow p-2 rounded catagories-box">
+                                                <img src="{% if item.image %} {{item.image.url}} {% else %} {% static 'images/personal/6.jpg' %} {% endif %} "
+                                                    alt="" class="img-fluid rounded mb-2">
+                                                <h3 class="fs-15 m-0 fw-medium">{{item.subtitle}}...</h3>
                                             </a>
                                         </div>
-                                        <!--end col-->
-                                        <div class="col">
-                                            <a href="#" class="d-block bg-card shadow p-2 rounded catagories-box">
-                                                <img src="{% static 'images/personal/3.jpg' %}" alt=""
-                                                    class="img-fluid rounded mb-2">
-                                                <h3 class="fs-15 m-0 fw-medium">There are many variations...</h3>
-                                            </a>
-                                        </div>
-                                        <!--end col-->
-                                        <div class="col">
-                                            <a href="#" class="d-block bg-card shadow p-2 rounded catagories-box">
-                                                <img src="{% static 'images/personal/4.jpg' %}" alt=""
-                                                    class="img-fluid rounded mb-2">
-                                                <h3 class="fs-15 m-0 fw-medium">Contrary to popular belief...</h3>
-                                            </a>
-                                        </div>
-                                        <!--end col-->
-                                        <div class="col">
-                                            <a href="#" class="d-block bg-card shadow p-2 rounded catagories-box">
-                                                <img src="{% static 'images/personal/5.jpg' %}" alt=""
-                                                    class="img-fluid rounded mb-2">
-                                                <h3 class="fs-15 m-0 fw-medium">Finibus Bonorum et Malorum...</h3>
-                                            </a>
-                                        </div>
-                                        <!--end col-->
+                                        {% endfor %}
                                     </div>
                                     <!--end row-->
                                 </div>
@@ -100,11 +53,11 @@
                             <div class="row">
                                 <div class="col-md">
                                     <div class="media">
-                                        <img src="{% static 'images/users/user-1.jpg' %}" alt=""
+                                        <img src="{% static 'images/logos/devprincek-sm.png' %}" alt=""
                                             class="thumb-sm rounded-circle me-2">
                                         <div class="media-body align-self-center text-truncate">
-                                            <h6 class="m-0 text-dark fw-medium">Donald Gardner</h6>
-                                            <p class="mb-0 fs-12 text-muted fw-medium">Cryptocurrency Analyst</p>
+                                            <h6 class="m-0 text-dark fw-medium">{{blog.get_author_name}}</h6>
+                                            <p class="mb-0 fs-12 text-muted fw-medium">Tech Enthusiast</p>
                                         </div>
                                         <!--end media-body-->
                                     </div>
@@ -112,7 +65,6 @@
                                 </div>
                                 <!--end col-->
                                 <div class="col-md-auto">
-                                    <!-- <button type="button" class="btn btn-sm btn-outline-primary px-4">Blogs</button> -->
                                     <a href="{% url 'website:blogs' %}"
                                         class="btn btn-sm btn-outline-primary px-4">Blogs</a>
                                 </div>
