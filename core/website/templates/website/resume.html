@@ -9,81 +9,443 @@
 {% block content %}
 <section class="section">
     <div class="container">
+        <!--end row-->
         <div class="row">
             <div class="col-12">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="main-timeline">
-                            <div class="timeline">
-                                <a href="#" class="timeline-content">
-                                    <div class="timeline-icon">
-                                        <i class="ti ti-trophy"></i>
+                <div class="row g-0">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card rounded bg-light h-100 border-0">
+                            <div class="card-body d-flex justify-content-center align-items-center">
+                                <div class="mx-auto text-center">
+                                    <img src="{% static 'images/personal/school.png' %}" alt="" class="vector-dark"
+                                        height="150">
+                                    <img src="{% static 'images/personal/school-light.png' %}" alt=""
+                                        class="vector-light" height="150">
+                                    <h5 class="text-dark fs-22 fw-medium my-2">Education</h5>
+                                </div>
+                            </div><!-- end card-body -->
+                        </div><!-- end card -->
+                    </div><!-- end col -->
+                    <div class="col-lg-8 col-md-6">
+                        <div class="card rounded bg-white h-100 border-0">
+                            <div class="card-body p-0">
+                                <div class="accordion accordion-flush" id="Education_accordion">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="prime">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#Education_one" aria-expanded="false">
+                                                Bsc. Computer Science
+                                                <span class="fw-medium text-primary ms-auto fs-14">2019 -
+                                                    Date</span>
+                                            </button>
+                                        </h2>
+                                        <div id="Education_one" class="accordion-collapse collapse show"
+                                            aria-labelledby="prime" data-bs-parent="#Education_accordion">
+                                            <div class="accordion-body">
+                                                <p class="text-muted mb-3">Currently reading Computer Science in the
+                                                    University of Ghana. Level 300.
+                                                </p>
+                                                <p class="fw-medium">University of Ghana, Legon.</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="inner-content">
-                                        <h3 class="title">GHI Themes - Web & App IT Company</h3>
-                                        <p class="description">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada
-                                            tellus lorem, et condimentum neque commodo
-                                        </p>
+                                    <!--end accordion-item-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="second">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#Education_two"
+                                                aria-expanded="false">
+                                                Proficiency in IT Skills
+                                                <span class="fw-medium text-primary ms-auto fs-14">2018 -
+                                                    2018</span>
+                                            </button>
+                                        </h2>
+                                        <div id="Education_two" class="accordion-collapse collapse"
+                                            aria-labelledby="second" data-bs-parent="#Education_accordion">
+                                            <div class="accordion-body">
+                                                <p class="text-muted mb-3">Took a three month course in IT.
+                                                </p>
+                                                <p class="fw-medium">Bridge IT, Ghana</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="timeline-year"><span>2019-22</span></div>
-                                </a>
-                            </div>
-                            <div class="timeline">
-                                <a href="#" class="timeline-content">
-                                    <div class="timeline-icon">
-                                        <i class="ti ti-users"></i>
+                                    <!--end accordion-item-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="higher">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#Education_three"
+                                                aria-expanded="false">
+                                                Senior High School
+                                                <span class="fw-medium text-primary ms-auto fs-14">2015 -
+                                                    2018</span>
+                                            </button>
+                                        </h2>
+                                        <div id="Education_three" class="accordion-collapse collapse"
+                                            aria-labelledby="higher" data-bs-parent="#Education_accordion">
+                                            <div class="accordion-body">
+                                                <p class="text-muted mb-3">Did my high school course at Tashtech,
+                                                    where I read general arts with the options: Elective
+                                                    Mathematics, Economics, Geography, Government.
+                                                </p>
+                                                <p class="fw-medium">Tapaman Senior High Technical School, Oti -
+                                                    Ghana</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="inner-content">
-                                        <h3 class="title">ABC themes - Web Design IT Company</h3>
-                                        <p class="description">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada
-                                            tellus lorem, et condimentum neque commodo
-                                        </p>
+                                    <!--end accordion-item-->
+                                </div>
+                                <!--end accordion-->
+                            </div><!-- end card-body -->
+                        </div><!-- end card -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+                <hr class="hr-dashed">
+                <div class="row g-0">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card rounded bg-light h-100 border-0">
+                            <div class="card-body d-flex justify-content-center align-items-center">
+                                <div class="mx-auto text-center">
+                                    <img src="{% static 'images/personal/job.png' %}" alt="" class="vector-dark"
+                                        height="150">
+                                    <img src="{% static 'images/personal/job-light.png' %}" alt="" class="vector-light"
+                                        height="150">
+                                    <h5 class="text-dark fs-22 fw-medium my-2">Experience</h5>
+                                </div>
+                            </div><!-- end card-body -->
+                        </div><!-- end card -->
+                    </div><!-- end col -->
+                    <div class="col-lg-8 col-md-6">
+                        <div class="card rounded bg-white h-100 border-0">
+                            <div class="card-body p-0">
+                                <div class="accordion accordion-flush" id="Experience_accordion">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="first-co">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#Experience_one" aria-expanded="false">
+                                                Mini Project - Team Lead
+                                                <span class="fw-medium text-primary ms-auto fs-14">2022 -
+                                                    2022</span>
+                                            </button>
+                                        </h2>
+                                        <div id="Experience_one" class="accordion-collapse collapse show"
+                                            aria-labelledby="first-co" data-bs-parent="#Experience_accordion">
+                                            <div class="accordion-body">
+                                                <p class="text-muted mb-1">- Lead a team of 10 to design, develop
+                                                    and deploy 'render' and platform where unskilled labour can find
+                                                    jobs suited for them.</p>
+                                                <p class="fw-medium">Computer Science Department, University of
+                                                    Ghana.</p>
+                                                <span
+                                                    class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Django</span>
+                                                <span
+                                                    class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">React
+                                                    Native</span>
+                                                <span
+                                                    class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Python</span>
+                                                <span
+                                                    class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Django
+                                                    RestFrameWork</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="timeline-year"><span>2014-18</span></div>
-                                </a>
-                            </div>
-                            <div class="timeline">
-                                <a href="#" class="timeline-content">
-                                    <div class="timeline-icon">
-                                        <i class="ti ti-school"></i>
+                                    <!--end accordion-item-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="second-co">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#Experience_two"
+                                                aria-expanded="false">
+                                                Freelance Developer
+                                                <span class="fw-medium text-primary ms-auto fs-14">2022 -
+                                                    2022</span>
+                                            </button>
+                                        </h2>
+                                        <div id="Experience_two" class="accordion-collapse collapse"
+                                            aria-labelledby="second-co" data-bs-parent="#Experience_accordion">
+                                            <div class="accordion-body">
+                                                <p class="text-muted mb-1">- Was part of a 3-member group that
+                                                    designed, developed and deployed a multi-vendor ecommerce
+                                                    platform for Techstuff.</p>
+                                                <p class="fw-medium">TechstuffGH, Circle Accra-Ghana</p>
+                                                <span
+                                                    class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Django</span>
+                                                <span
+                                                    class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Bootstrap</span>
+                                                <span
+                                                    class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">javascript</span>
+                                                <span
+                                                    class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">ChartJS</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="inner-content">
-                                        <h3 class="title">MSc IT Master Degree</h3>
-                                        <p class="description">
-                                            Harvard University is an educational institution that offers graduate,
-                                            professional, and research programs in the fields of and public health.
-                                        </p>
+                                    <!--end accordion-item-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="third-co">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#Experience_three"
+                                                aria-expanded="false">
+                                                Freelance Developer
+                                                <span class="fw-medium text-primary ms-auto fs-14">2022 -
+                                                    2022</span>
+                                            </button>
+                                        </h2>
+                                        <div id="Experience_three" class="accordion-collapse collapse"
+                                            aria-labelledby="third-co" data-bs-parent="#Experience_accordion">
+                                            <div class="accordion-body">
+                                                <p class="text-muted mb-1">- Was the sole developer who designed,
+                                                    developed and deployed a product advertisement platform for
+                                                    Jamilahome Limited.</p>
+                                                <p class="fw-medium">Jamilahome Limited, Accra - Ghana</p>
+                                                <span
+                                                    class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Python</span>
+                                                <span
+                                                    class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">ChartJS</span>
+                                                <span
+                                                    class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Django</span>
+                                                <span
+                                                    class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Bootstrap</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="timeline-year"><span>2012-13</span></div>
-                                </a>
-                            </div>
-                            <div class="timeline">
-                                <a href="#" class="timeline-content">
-                                    <div class="timeline-icon">
-                                        <i class="ti ti-building"></i>
+                                    <!--end accordion-item-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="third-co">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#Experience_four"
+                                                aria-expanded="false">
+                                                Freelance Developer
+                                                <span class="fw-medium text-primary ms-auto fs-14">2022 -
+                                                    2022</span>
+                                            </button>
+                                        </h2>
+                                        <div id="Experience_four" class="accordion-collapse collapse"
+                                            aria-labelledby="third-co" data-bs-parent="#Experience_accordion">
+                                            <div class="accordion-body">
+                                                <p class="text-muted mb-1">- Designed, developed and deployed an
+                                                    electronic voting platform for Tashtech, an SHS based in Ghana -
+                                                    Oti Region.</p>
+                                                <p class="fw-medium">Tapaman Senior High School, Oti - Ghana</p>
+                                                <span
+                                                    class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Python</span>
+                                                <span
+                                                    class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">ChartJS</span>
+                                                <span
+                                                    class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Django</span>
+                                                <span
+                                                    class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Bootstrap</span>
+                                                <span
+                                                    class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Javascript</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="inner-content">
-                                        <h3 class="title">High / Higher secondary school</h3>
-                                        <p class="description">
-                                            Princeton University is an educational institution that offers graduate,
-                                            professional, and research programs in the fields of and public health.
-                                        </p>
+                                    <!--end accordion-item-->
+                                    <!--end accordion-item-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="third-co">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#Experience_five"
+                                                aria-expanded="false">
+                                                Software Developer
+                                                <span class="fw-medium text-primary ms-auto fs-14">2021 -
+                                                    Date</span>
+                                            </button>
+                                        </h2>
+                                        <div id="Experience_five" class="accordion-collapse collapse"
+                                            aria-labelledby="third-co" data-bs-parent="#Experience_accordion">
+                                            <div class="accordion-body">
+                                                <p class="text-muted mb-1">- Joined PayHub Ghana Limited, a fintech
+                                                    company as a software developer.</p>
+                                                <p class="fw-medium">PayHub Ghana Limited, Accra - Ghana</p>
+                                                <span
+                                                    class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Django</span>
+                                                <span
+                                                    class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">RestAPI</span>
+                                                <span
+                                                    class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">DRF</span>
+                                                <span
+                                                    class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Postgresql</span>
+                                                <span
+                                                    class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">DigitalOcean</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="timeline-year"><span>2007-08</span></div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
+                                    <!--end accordion-item-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="third-co">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#Experience_six"
+                                                aria-expanded="false">
+                                                IT Instructor
+                                                <span class="fw-medium text-primary ms-auto fs-14">2020 -
+                                                    2021</span>
+                                            </button>
+                                        </h2>
+                                        <div id="Experience_six" class="accordion-collapse collapse"
+                                            aria-labelledby="third-co" data-bs-parent="#Experience_accordion">
+                                            <div class="accordion-body">
+                                                <p class="text-muted mb-1">- Served as an IT instructor for Bridge
+                                                    IT in the Oti Region. Introduced students to basic computing
+                                                    concepts..</p>
+                                                <p class="fw-medium">Bridge IT, Oti - Ghana</p>
+                                                <span
+                                                    class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">MS
+                                                    Word</span>
+                                                <span
+                                                    class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">MS
+                                                    Paint</span>
+                                                <span
+                                                    class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Intro
+                                                    to Computing</span>
+                                                <span
+                                                    class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Keyboard
+                                                    skills</span>
+                                                <span
+                                                    class="badge badge-lg rounded bg-soft-alt-info fw-normal fs-13 text-uppercase mt-2">Mouse
+                                                    Handling</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end accordion-item-->
+                                </div>
+                                <!--end accordion-->
+                            </div><!-- end card-body -->
+                        </div><!-- end card -->
+                    </div><!-- end col -->
                 </div>
-                <!-- end row -->
-
-            </div>
-            <!-- end col -->
-        </div>
-        <!-- end row -->
+                <!--end row-->
+                <hr class="hr-dashed">
+                <div class="row g-0">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card rounded bg-light h-100 border-0">
+                            <div class="card-body d-flex justify-content-center align-items-center">
+                                <div class="mx-auto text-center">
+                                    <img src="{% static 'images/personal/traits.png' %}" alt="" class="vector-dark"
+                                        height="150">
+                                    <img src="{% static 'images/personal/traits.png' %}" alt="" class="vector-light"
+                                        height="150">
+                                    <h5 class="text-dark fs-22 fw-medium my-2">Personal Traits</h5>
+                                </div>
+                            </div><!-- end card-body -->
+                        </div><!-- end card -->
+                    </div><!-- end col -->
+                    <div class="col-lg-8 col-md-6">
+                        <div class="card rounded bg-white h-100 border-0">
+                            <div class="card-body p-0">
+                                <div class="accordion accordion-flush" id="Traits_accordion">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="first-co">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#Trait_one" aria-expanded="false">
+                                                Quick Learner
+                                            </button>
+                                        </h2>
+                                        <div id="Trait_one" class="accordion-collapse collapse show"
+                                            aria-labelledby="first-co" data-bs-parent="#Traits_accordion">
+                                            <div class="accordion-body">
+                                                <p class="text-muted mb-1">- I am a quick learning; I may not know what
+                                                    something is at a given time, but I will find it out.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end accordion-item-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="second-co">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#traits_two"
+                                                aria-expanded="false">
+                                                Analytical Thinker
+                                            </button>
+                                        </h2>
+                                        <div id="traits_two" class="accordion-collapse collapse"
+                                            aria-labelledby="second-co" data-bs-parent="#Experience_accordion">
+                                            <div class="accordion-body">
+                                                <p class="text-muted mb-1">- I am able to analyze difficult situations,
+                                                    and break down complex problems into smaller solvable units. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end accordion-item-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="third-co">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#traits_three"
+                                                aria-expanded="false">
+                                                Abstract Thinker
+                                            </button>
+                                        </h2>
+                                        <div id="traits_three" class="accordion-collapse collapse"
+                                            aria-labelledby="third-co" data-bs-parent="#Experience_accordion">
+                                            <div class="accordion-body">
+                                                <p class="text-muted mb-1">- I am able to understand and convert
+                                                    abstract concepts to useful practical concepts, making them
+                                                    comprehensible and solvable. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end accordion-item-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="third-co">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#traits_four"
+                                                aria-expanded="false">
+                                                Considerate
+                                            </button>
+                                        </h2>
+                                        <div id="traits_four" class="accordion-collapse collapse"
+                                            aria-labelledby="third-co" data-bs-parent="#Experience_accordion">
+                                            <div class="accordion-body">
+                                                <p class="text-muted mb-1">-I am considerate. I try to understand things
+                                                    from other people's perspective. I am careful as much as possible
+                                                    not to inconvinience others</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end accordion-item-->
+                                    <!--end accordion-item-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="third-co">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#traits_five"
+                                                aria-expanded="false">
+                                                Agile and Proactive
+                                            </button>
+                                        </h2>
+                                        <div id="traits_five" class="accordion-collapse collapse"
+                                            aria-labelledby="third-co" data-bs-parent="#Experience_accordion">
+                                            <div class="accordion-body">
+                                                <p class="text-muted mb-1">- I am a quick thinker. I am able to think
+                                                    in-between the lines to find proactive solutions to problems before
+                                                    they escalate.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end accordion-item-->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="third-co">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#traits_six"
+                                                aria-expanded="false">
+                                                Team Player
+                                            </button>
+                                        </h2>
+                                        <div id="traits_six" class="accordion-collapse collapse"
+                                            aria-labelledby="third-co" data-bs-parent="#Experience_accordion">
+                                            <div class="accordion-body">
+                                                <p class="text-muted mb-1">- I've always been a great asset to all teams
+                                                    I've ever worked with. Ready to learn from other team members and
+                                                    happy to assist those who require my assistance.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end accordion-item-->
+                                </div>
+                                <!--end accordion-->
+                            </div><!-- end card-body -->
+                        </div><!-- end card -->
+                    </div><!-- end col -->
+                </div>
+                <!--end row-->
+            </div><!-- end col -->
+        </div><!-- end row -->
     </div>
     <!-- end container -->
 </section>
