@@ -1,3 +1,4 @@
+from configparser import MAX_INTERPOLATION_DEPTH
 from django.db import models
 from ckeditor.fields import RichTextField
 from accounts.models import User
@@ -6,12 +7,17 @@ from accounts.models import User
 class Blog(models.Model):
     '''Model for creating blog posts'''
     title = models.CharField(max_length=200)
+    subtitle = models.CharField(max_length=300, null=True, blank=True)
     image = models.ImageField(upload_to='images/')
     content = RichTextField()
-    tags = models.ManyToManyField('Tag')
+    tags = models.CharField(max_length=200, null=True, blank=True)
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
+
+    def get_author_name(self):
+        return self.author if self.author else 'devprincek'
 
     def __str__(self):
         return self.title
@@ -33,15 +39,6 @@ class Category(models.Model):
     '''Model for blog categories'''
     name = models.CharField(max_length=200)
     description = models.CharField(max_length=300)
-
-    def __str__(self):
-        return self.name
-
-
-# tags - name
-class Tag(models.Model):
-    '''Model for blog tags'''
-    name = models.CharField(max_length=200)
 
     def __str__(self):
         return self.name
