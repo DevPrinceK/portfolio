@@ -29,8 +29,15 @@
             <div class="col-12 card blog-item">
                 <div class="card-body">
                     <div class="row">
-                       <!-- blog creation form including ckeditor text field -->
-                       
+                        <!-- blog creation form including ckeditor text field -->
+                        <div class="col-10 mx-auto">
+                            <form method="POST" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                {{form.media}}
+                                {{form.as_p}}
+                                <button type="submit" class="btn btn-sm btn-primary">Publish</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
