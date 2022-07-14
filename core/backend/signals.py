@@ -19,7 +19,7 @@ def notify_devprincek(sender, instance, created, **kwargs):
 
         sender_info = name + ' ' + contact + ' ' + email + ' \n'
         body = subject.upper() + ' \n\n' + message
-        content = body + ' \n' + 'FROM: \n\n' + sender_info
+        content = body + ' \n\n' + 'FROM: \n' + sender_info
 
         send_sms("devprincek", content, ["0558366133"])
 
