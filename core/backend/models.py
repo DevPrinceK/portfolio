@@ -1,4 +1,5 @@
 from configparser import MAX_INTERPOLATION_DEPTH
+import email
 from django.db import models
 from ckeditor.fields import RichTextField
 from accounts.models import User
@@ -47,9 +48,9 @@ class Category(models.Model):
 class Contact(models.Model):
     'Model for storing user contacts'
     name = models.CharField(max_length=200)
-    email = models.EmailField(max_length=200, blank=True, null=True)
+    email = models.EmailField(max_length=100, blank=True, null=True)
     subject = models.CharField(max_length=200)
-    contact = models.CharField(max_length=200, blank=True, null=True)
+    contact = models.CharField(max_length=100, blank=True, null=True)
     message = models.TextField()
 
     def __str__(self):
@@ -64,3 +65,12 @@ class Client(models.Model):
 
     def __str__(self):
         return self.name
+
+
+# subscribers
+class Subscriber(models.Model):
+    '''Subscriber model: - Subscription for weekly blog'''
+    email = models.EmailField(max_length=100)
+
+    def __str__(self):
+        return self.email if self.email else None
