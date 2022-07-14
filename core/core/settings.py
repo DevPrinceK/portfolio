@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -96,3 +97,7 @@ AUTH_USER_MODEL = 'accounts.User'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# EXTERNAL API CONFIG
+ARKESEL_API_KEY = os.getenv('ARKESEL_API_KEY')
