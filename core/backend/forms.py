@@ -1,5 +1,5 @@
 from django import forms
-from .models import Blog, Work, Category, Contact
+from .models import Blog, Subscriber, Work, Category, Contact
 
 
 class ContactForm(forms.ModelForm):
@@ -21,3 +21,9 @@ class BlogForm(forms.ModelForm):
             'tags': forms.TextInput(attrs={'class': 'form-control'}),
             'category': forms.Select(attrs={'class': 'form-control'}),
         }
+
+
+class SubscriberForm(forms.ModelForm):
+    class Meta:
+        model = Subscriber
+        fields = ['email']
