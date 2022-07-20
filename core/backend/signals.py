@@ -83,13 +83,14 @@ def confirmation_mail(SUBSCRIBER):
 # new blog notification mail
 def notification_mail(BLOG):
     confirmation_template = 'website/notification/notification_mail.html'
-    text = render_to_string(confirmation_template, {
-        'blog': BLOG,
-    })
+
     sent_mails = 0
     not_sent_mails = 0
     for subscriber in Subscriber.objects.all():
         if subscriber.email:
+            text = render_to_string(confirmation_template, {
+                'blog': BLOG,
+            })
             msg = EmailMultiAlternatives(
                 'New Blog Post', text,
                 settings.EMAIL_HOST_USER, [subscriber.email])
