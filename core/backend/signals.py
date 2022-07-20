@@ -1,6 +1,6 @@
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-from .models import Contact, Subscriber
+from .models import Contact, Subscriber, Blog
 from core import settings
 import requests
 import array
@@ -37,7 +37,15 @@ def subscription_notification(sender, instance, created, **kwargs):
     pass
 
 
-
+@receiver(post_save, sender=Blog)
+def notifify_subscribers(sender, instance, created, **kwargs):
+    if created:
+        if instance.is_published:
+            notification_mail(instance)
+            print('New Blogs: Mail Sent to subscribers')
+    if instance.is_published:
+        notification_mail(instance)
+        print('Old blog: Mail sent to subscribers')
 
 
 def send_sms(sender: str, message: str, recipients: array.array):
@@ -95,4 +103,3 @@ def notification_mail(BLOG):
                 sent_mails += 1
                 print("Successful....Email sent!")
             pass
-
