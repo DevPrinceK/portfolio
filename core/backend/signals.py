@@ -1,11 +1,17 @@
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from .models import Contact, Subscriber
-# ...................
+from core import settings
 import requests
 import array
 
-ARKESEL_API_KEY = "OkhnOUlLV1FhSlpLQktXN0M="
+
+from django.core.mail import EmailMultiAlternatives
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
+
+
+# ARKESEL_API_KEY = "OkhnOUlLV1FhSlpLQktXN0M="
 
 
 @receiver(post_save, sender=Contact)
@@ -24,15 +30,18 @@ def notify_devprincek(sender, instance, created, **kwargs):
         send_sms("devprincek", content, ["0558366133"])
 
 
-# @receiver(post_save, sender=Subscriber)
-# def subscription_notification(sender, instance, created, **kwargs):
-#     if created:
-#         message = 'Hello there! \n Thanks for subscribing to my weekly blogpost. \n'
-#         pass
+@receiver(post_save, sender=Subscriber)
+def subscription_notification(sender, instance, created, **kwargs):
+    if created:
+        confirmation_mail(instance)
+    pass
+
+
+
 
 
 def send_sms(sender: str, message: str, recipients: array.array):
-    header = {"api-key": ARKESEL_API_KEY, 'Content-Type': 'application/json',
+    header = {"api-key": settings.ARKESEL_API_KEY, 'Content-Type': 'application/json',
               'Accept': 'application/json'}
     SEND_SMS_URL = "https://sms.arkesel.com/api/v2/sms/send"
     payload = {
@@ -41,14 +50,49 @@ def send_sms(sender: str, message: str, recipients: array.array):
         "recipients": recipients
     }
     response = requests.post(SEND_SMS_URL, headers=header, json=payload)
+    print(response.json())
     return response.json()
 
 
 # subscription confirmation mail
-def confirmation_mail():
-    pass
+def confirmation_mail(SUBSCRIBER):
+    confirmation_template = 'website/notification/confirmation_mail.html'
+    text = render_to_string(confirmation_template, {
+        'subscriber': SUBSCRIBER,
+    })
+    msg = EmailMultiAlternatives(
+        'Subscription Confirmation', text,
+        settings.EMAIL_HOST_USER, [SUBSCRIBER.email])
+    msg.attach_alternative(text, "text/html")
+    try:
+        msg.send()
+    except Exception as err:
+        print(err)
+    else:
+        print("Successful....Email sent!")
 
 
 # new blog notification mail
-def notification_mail():
-    pass
+def notification_mail(BLOG):
+    confirmation_template = 'website/notification/notification_mail.html'
+    text = render_to_string(confirmation_template, {
+        'blog': BLOG,
+    })
+    sent_mails = 0
+    not_sent_mails = 0
+    for subscriber in Subscriber.objects.all():
+        if subscriber.email:
+            msg = EmailMultiAlternatives(
+                'New Blog Post', text,
+                settings.EMAIL_HOST_USER, [subscriber.email])
+            msg.attach_alternative(text, "text/html")
+            try:
+                msg.send()
+            except Exception as err:
+                not_sent_mails += 1
+                print(err)
+            else:
+                sent_mails += 1
+                print("Successful....Email sent!")
+            pass
+
