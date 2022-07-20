@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
+from django.http import HttpResponseRedirect
 from django.views import View
-from backend.forms import ContactForm
+from backend.forms import ContactForm, SubscriberForm
 
 from backend.models import Blog
 
@@ -51,9 +52,25 @@ class ContactView(View):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('website:index')
+            print('Form is valid: contact saved')
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
         print(f'form.errors: {form.errors}')
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
+
+class SubscriptionView(View):
+
+    def get(self, request, *args, **kwargs):
         return redirect('website:index')
+
+    def post(self, request, *args, **kwargs):
+        form = SubscriberForm(request.POST)
+        if form.is_valid():
+            form.save()
+            print('Form is valid: subscriber saved')
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+        print(f'form.errors: {form.errors}')
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
 class ProjectsView(View):
