@@ -10,8 +10,9 @@
               <!--end col-->
               <div class="col-lg-6 ml-auto">
                   <div class="cta-search">
-                      <form class="position-relative">
-                          <input type="email" placeholder="Email Address" required="">
+                      <form class="position-relative" method="POST" action="{% url 'website:subscribe' %}">
+                          {% csrf_token %}
+                          <input type="email" placeholder="Email Address" name="email" required>
                           <button type="submit" class="btn btn-dark">Send Massage</button>
                       </form>
                   </div>
