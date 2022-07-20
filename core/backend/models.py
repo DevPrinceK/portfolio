@@ -16,6 +16,7 @@ class Blog(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
+    is_published = models.BooleanField(default=False)
 
     def get_author_name(self):
         return self.author if self.author else 'devprincek'
