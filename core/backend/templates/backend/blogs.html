@@ -29,9 +29,9 @@
                 </div>
             </div>
             {% for blog in blogs %}
-            <div class="col-12 card blog-item">
+            <div class="col-12 card">
                 <div class="card-body">
-                    <div class="row">
+                    <div class="row blog-item">
                         <h2 class="col-10"> <a href="">{{blog.title}}</a></h2>
                         <div class="container col-2 text-right">
                             <a href="" class="btn btn-sm btn-primary">Edit</a>
@@ -40,7 +40,6 @@
                                 <input type="hidden" name="blog_id" value="{{blog.id}}">
                                 <button type="submit" class="btn btn-sm btn-danger">Delete</button>
                             </form>
-                            <!-- <a href="" class="btn btn-sm btn-danger">Delete</a> -->
                         </div>
                     </div>
                 </div>
