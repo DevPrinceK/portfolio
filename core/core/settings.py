@@ -21,6 +21,7 @@ INSTALLED_APPS = [
 
     #
     'ckeditor',
+    'django_cron',
 ]
 
 MIDDLEWARE = [
@@ -110,3 +111,8 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get(
     'EMAIL_HOST_USER', 'mshjcrinfo@gmail.com')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', 'zfvtytadnvvyutkx')
+
+#  Task scheduling - django-cron
+CRON_CLASSES = [
+    "backend.cron.MyCronJob",
+]
